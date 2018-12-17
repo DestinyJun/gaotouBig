@@ -8,5 +8,11 @@
     "start": "browser-sync start --server --port 2017 --no-notify --files \"*.html,js/*.js,css/*.css\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "echarts": "^4.2.0-rc.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1"
+  }
 }
