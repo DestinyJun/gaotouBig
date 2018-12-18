@@ -7,11 +7,141 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>高投服务区大数据</title>
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=12DDKEKWABDKneKfibVKefTNcyHRosT8"></script>
+    <script src="./node_modules/echarts/dist/echarts.js"></script>
+    <script src="./node_modules/echarts/dist/extension/bmap.js"></script>
+    <script src='./node_modules/echarts/map/js/china.js'></script>
 </head>
 <body>
-<div class="home">
-    <h1>123</h1>
+<!--背景-->
+<div id="main" class="main"></div>
+<!--头部-->
+<div  class="home left">
+    <!--左侧标题-->
+    <h5>久长服务区大数据</h5>
+    <!--右侧时间显示-->
+    <div class="right">
+        <ul>
+            <li>
+                <span>当前</span>
+                <span>时间</span>
+            </li>
+            <li id="time">
+            </li>
+            <li>
+                <span id="nowWeek"></span>
+                <span id="date"></span>
+            </li>
+        </ul>
+    </div>
 </div>
+<!--左侧-->
+<div class="leftMenu menu">
+    <!--//左侧头部人流量统计-->
+    <div class="title">
+      <i class="fa fa-user pull-left" style="margin-left: 0.5rem"></i>
+      <span class="title-left" >今日累计客流：<span id="user">132</span></span>
+      <span class="title-left"  style="margin-left: 0.8rem">平均滞留时间：<span id="userTime">2小时30分</span></span>
+      <i class="fa fa-angle-double-left pull-right"></i>
+      <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+
+  </div>
+    <!--1、柱状图-->
+    <div class="bar" id="bar"></div>
+    <!--分割线-->
+    <div class="leftcut-off">
+        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 9vw">人流分布</span>
+        <i class="fa fa-angle-double-right pull-right"></i>
+    </div>
+    <!--2、地图-->
+    <div class="Map" id="Map"></div>
+    <!--分割线-->
+    <div class="leftcut-off">
+        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 9vw">厕所使用率</span>
+        <i class="fa fa-angle-double-left pull-right"></i>
+    </div>
+    <!--3、仪表盘-->
+    <div class="graph">
+        <div style="width:10vw;height: 13vh;float: left;margin-left: 1vw" id="graph1"></div>
+        <div style="width:10vw;height: 13vh;float: left;margin-left: 1vw" id="graph2"></div>
+    </div>
+    <!--分割线-->
+    <div class="leftcut-off">
+        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 9vw">消 费 喜 好</span>
+        <i class="fa fa-angle-double-right pull-right"></i>
+    </div>
+    <!--面积图-->
+    <div class="line" id="line"></div>
+</div>
+<!--右侧-->
+<div class="rightMenu menu">
+    <div class="title">
+        <i class="fa fa-car pull-left" style="margin-left: 0.5rem"></i>
+        <span class="title-left" >今日累计车流：<span id="car">524</span></span>
+        <span class="title-left"  style="margin-left: 0.5rem">平均滞留时间：<span id="carTime">2小时30分</span></span>
+        <i class="fa fa-angle-double-left pull-right"></i>
+        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+    </div>
+    <!--1、天气-->
+    <div class="weather">
+
+    </div>
+    <!--分割线-->
+    <div class="rightcut-off">
+        <div style="width: 98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 9vw">车辆类型分布</span>
+        <i class="fa fa-angle-double-right pull-right"></i>
+    </div>
+    <!--2、车流饼状图-->
+    <div class="pie" id="pie"></div>
+    <!--分割线-->
+    <div class="rightcut-off">
+        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 9vw">车位使用率</span>
+        <i class="fa fa-angle-double-left pull-right"></i>
+    </div>
+    <!--3、仪表盘-->
+    <div class="dashboard">
+      <div style="width:7vw;height: 13vh;float: left;margin-left: 1vw" id="dashboard1"></div>
+      <div style="width:7vw;height: 13vh;float: left;margin-left: 1vw" id="dashboard2"></div>
+      <div style="width:7vw;height: 13vh;float: left;margin-left: 1vw" id="dashboard3"></div>
+    </div>
+    <!--分割线-->
+    <div class="rightcut-off">
+        <div style="width:  98%;height: 2px;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 9vw">视频监控</span>
+        <i class="fa fa-angle-double-left pull-right"></i>
+    </div>
+    <div id="video" class="video">
+        <object type='application/x-vlc-plugin'
+                pluginspage="rtsp://admin:Hik12345+@117.187.60.146:555/Streaming/Channels/1801?transportmode-unicast" id='vlc' events='false' width="100%" height="98%">
+            <param name='mrl' value='${url}' />
+            <param name='volume' value='50' />
+            <param name='autoplay' value='true' />
+            <param name='loop' value='false' />
+            <param name='fullscreen' value='true' />
+            <param name='controls' value='true' />
+        </object>
+
+    </div>
+</div>
+
 </body>
+<script src="js/rightPie.js"></script>
+<script src="js/backgroundMap.js"></script>
+<script src="js/leftMenuBar.js"></script>
+<script src="js/leftMenuMap.js"></script>
+<script src="js/leftLine.js"></script>
+<script src="js/rightDashboard.js"></script>
+<script src="js/Weather.js"></script>
+<script src="js/titleData.js"></script>
 <script src="js/app.js"></script>
+
 </html>

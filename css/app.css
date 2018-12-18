@@ -1,3 +1,139 @@
 .home {
-    color: black;
+    height: 6vh;
+    background: #0C1212;
+    width: 100vw;
+    /*text-align: center;*/
+    opacity: 0.9;
+}
+.left {
+    left:0;
+    top:0;
+    position: absolute;
+}
+.left h5{
+    color: #31A0B4;
+    line-height: 6vh;
+    margin-left: 5vw;
+}
+.right {
+    color: #ffffff;
+    font-family: "微软雅黑", serif;
+    top:0;
+    right:0;
+    position: absolute;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 2vw 0 0;
+    line-height: 3vh;
+    overflow: hidden;
+}
+/*header*/
+.home .right>ul>li {
+    float: left;
+    margin-left: 2vw;
+}
+.home .right>ul>li>span {
+    margin-top: 0.5vh;
+    height: 2vh;
+    display: block;
+    font-size: 0.5rem;
+    text-align: center;
+}
+.home .right>ul #time {
+    font-size: 1.5rem;
+    line-height: 6vh;
+}
+/*body*/
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+.menu{
+    background: #0C1212;
+    width: 25vw;
+    height: 94vh;
+    margin-top: 6vh;
+    opacity: 0.9;
+    border:1px solid #2B2B2B;
+}
+/*分割线*/
+.leftcut-off{
+    color: #3EAACC;
+    font-size: 0.875rem;
+    margin: 2vh 1vw 0.8vh 0;
+}
+.rightcut-off{
+    color: #3EAACC;
+    font-size: 0.875rem;
+    margin: 2vh 1vw 0.8vh 0;
+}
+/*左侧*/
+.leftMenu{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.leftMenu .title {
+    padding: 2vh 0;
+    color: #3EAACC;
+    font-size: 0.8rem;
+}
+.leftMenu .title .title-left {
+    font-size: 0.8rem;
+}
+.leftMenu .title i{
+    margin: 0.5vh 1vw 0.8vh 0;
+ }
+.leftMenu .bar {
+    width: 24vw;
+    height: 15vh;
+}
+.leftMenu .Map {
+    width: 24vw;
+    height: 22vh;
+}
+.leftMenu .graph {
+    width: 24vw;
+    height: 14vh;
+}
+.leftMenu .line {
+    width: 24vw;
+    height: 16vh;
+}
+/*右侧*/
+.rightMenu{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.rightMenu .title {
+    padding: 2vh 0;
+    color: #3EAACC;
+    font-size: 0.8rem;
+}
+.rightMenu .title .title-left {
+    font-size: 0.8rem;
+
+}
+.rightMenu .title i{
+    margin: 0.5vh 1vw 0.8vh 0;
+}
+.rightMenu .weather {
+    width: 24vw;
+    height: 14vh;
+}
+.rightMenu .pie {
+    width: 24vw;
+    height: 20vh;
+}
+.rightMenu .dashboard {
+    width: 24vw;
+    height: 14vh;
+}
+.rightMenu .video{
+    width: 24vw;
+    height: 20vh;
 }
