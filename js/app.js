@@ -2,8 +2,8 @@
 displayTime();
 clock();
 // 左边
-const myChartline = echarts.init(document.getElementById('line'));
-line(myChartline);
+// const myChartline = echarts.init(document.getElementById('line'));
+// line(myChartline);
 //客流柱状图
 
 const myBar = echarts.init(document.getElementById('bar'));

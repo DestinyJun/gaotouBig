@@ -23,19 +23,57 @@ var weatherJosn;
             yestype.innerText=weatherJosn.data.yesterday.type;
             yesday.innerText=weatherJosn.data.yesterday.date;
             yeswen.innerText=lowyeswen.substring(lowyeswen.length-3,lowyeswen.length)+'-'+highyeswen.substring(highyeswen.length-3,highyeswen.length);
-            icon(yestype,yesicon);
+            icon(weatherJosn.data.yesterday.type,yesicon);
 
             //今天
             var wentoday = document.getElementById('wentoday');
-            console.log(weatherJosn.data.forecast[0]['low']);
+            var typeToday = document.getElementById('typeToday');
+            var todayIcon = document.getElementById('todayicon');
+            var windToday = document.getElementById('windToday');
             var lowwentoday = weatherJosn.data.forecast[0]['low'].toString();
             var highwentoday = weatherJosn.data.forecast[0]['high'].toString();
-            // console.log(lowwentoday.substring(lowwentoday.length-3,lowwentoday.length));
+            windToday.innerText = weatherJosn.data.forecast[0]['fengxiang'];
             wentoday.innerText = lowwentoday.substring(lowwentoday.length-3,lowwentoday.length)+'-'+highwentoday.substring(highwentoday.length-3,highwentoday.length);
+            typeToday.innerText = weatherJosn.data.forecast[0]['type'];
+            icon(weatherJosn.data.forecast[0]['type'],todayIcon);
 
+            //后天
+            var firstDay = document.getElementById('firstDay');
+            var firstWen = document.getElementById('firstWen');
+            var firstIcon = document.getElementById('firstIcon');
+            var firstType = document.getElementById('firstType');
+            var lowwenfirst = weatherJosn.data.forecast[1]['low'].toString();
+            var highwenfirst = weatherJosn.data.forecast[1]['high'].toString();
+            firstDay.innerText = weatherJosn.data.forecast[1]['date'];
+            firstWen.innerText = lowwenfirst.substring(lowwenfirst.length-3,lowwenfirst.length)+'-'+highwenfirst.substring(highwenfirst.length-3,highwenfirst.length);
+            firstType.innerText = weatherJosn.data.forecast[1]['type'];
+            icon(weatherJosn.data.forecast[1]['type'],firstIcon);
+            //大后天
+            var secondDay = document.getElementById('secondDay');
+            var secondWen = document.getElementById('secondWen');
+            var secondIcon = document.getElementById('secondIcon');
+            var secondType = document.getElementById('secondType');
+            var lowwensecond = weatherJosn.data.forecast[2]['low'].toString();
+            var highwensecond = weatherJosn.data.forecast[2]['high'].toString();
+            secondDay.innerText = weatherJosn.data.forecast[2]['date'];
+            secondWen.innerText = lowwensecond.substring(lowwensecond.length-3,lowwensecond.length)+'-'+highwensecond.substring(highwensecond.length-3,highwensecond.length);
+            secondType.innerText = weatherJosn.data.forecast[2]['type'];
+            icon(weatherJosn.data.forecast[2]['type'],secondIcon);
+            //大大后天
+            var thirdDay = document.getElementById('thirdDay');
+            var thirdWen = document.getElementById('thirdWen');
+            var thirdIcon = document.getElementById('thirdIcon');
+            var thirdType = document.getElementById('thirdType');
+            var lowwenthird = weatherJosn.data.forecast[3]['low'].toString();
+            var highwenthird = weatherJosn.data.forecast[3]['high'].toString();
+            thirdDay.innerText = weatherJosn.data.forecast[3]['date'];
+            thirdWen.innerText = lowwenthird.substring(lowwenthird.length-3,lowwenthird.length)+'-'+highwenthird.substring(highwenthird.length-3,highwenthird.length);
+            thirdType.innerText = weatherJosn.data.forecast[3]['type'];
+            icon(weatherJosn.data.forecast[3]['type'],thirdIcon);
         }
     };
     function icon(type,id) {
+        console.log(type);
         switch (type) {
             case '小雨':  id.className = 'icon-light-rain';break;
             case '中雨':  id.className = 'icon-moderate-rain';break;
@@ -46,7 +84,9 @@ var weatherJosn;
             case '晴':  id.className = 'icon-fine';break;
             case '雨夹雪':  id.className = 'icon-sleet';break;
             case '雷阵雨':  id.className = 'icon-thundershower';break;
-            default:break;
+            case '阴':  id.className = 'icon-cloudy-sky ';break;
+            default:
+                break;
         }
     }
 

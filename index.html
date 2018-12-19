@@ -73,13 +73,13 @@
         <div style="width:10vw;height: 13vh;float: left;margin-left: 1vw" id="graph2"></div>
     </div>
     <!--分割线-->
-    <div class="leftcut-off">
+<!--    <div class="leftcut-off">
         <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
         <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 10vw">消 费 喜 好</span>
         <i class="fa fa-angle-double-right pull-right"></i>
     </div>
-    <!--面积图-->
-    <div class="line" id="line"></div>
+    &lt;!&ndash;面积图&ndash;&gt;
+    <div class="line" id="line"></div>-->
 </div>
 <!--右侧-->
 <div class="rightMenu menu">
@@ -92,12 +92,13 @@
     </div>
     <!--1、天气-->
     <div class="weather">
-       <div>
+       <div class="today">
            <span class="wen" id="wentoday">18℃-36℃</span>
-           <span class="weatherIcon" id="">阴转晴</span><span class="icon-cloudy" style="margin-left: 0.5rem"></span>
+           <span class="weatherIcon" id="typeToday">阴转晴</span>
+           <span id="todayicon" class="icon-cloudy" style="margin-left: 0.5rem"></span>
            <span class="wind">风向</span>
-           <span style="margin-left: 0.875rem">西南</span>
-           <div style="width:  100%;height: 0.2vh;background: #3EAACC;margin: 0.8vh 0.5vw 0 0;opacity: 0.9"></div>
+           <span style="margin-left: 0.875rem" id="windToday">西南</span>
+           <div style="width:  100%;height: 0.2vh;background: #3EAACC;margin: 2vh 0.5vw 0 0;opacity: 0.9"></div>
            <div class="tomorrow">
                <!--昨天-->
                <div class="col-md-3" style="float: left;padding: 0">
@@ -108,24 +109,24 @@
                    </div>
                </div>
                <div class="col-md-3" style="float: left ;padding: 0;">
-                   <div>明天</div>
-                   <div>18℃-36℃</div>
-                   <div>阴转晴
-                       <span class="icon-cloudy" style="margin-left: 0.5rem"></span>
+                   <div id="firstDay">明天</div>
+                   <div id="firstWen">18℃-36℃</div>
+                   <div><span id="firstType">阴转晴</span>
+                        <span id="firstIcon" class="icon-cloudy" style="margin-left: 0.5rem"></span>
                    </div>
                </div>
                <div class="col-md-3" style="float: left;padding: 0;">
-                   <div>明天</div>
-                   <div>18℃-36℃</div>
-                   <div>阴转晴
-                       <span class="icon-cloudy" style="margin-left: 0.5rem"></span>
+                   <div id="secondDay">明天</div>
+                   <div id="secondWen">18℃-36℃</div>
+                   <div> <span id="secondType">阴转晴</span>
+                       <span id="secondIcon" class="icon-cloudy" style="margin-left: 0.5rem"></span>
                    </div>
                </div>
                <div class="col-md-3" style="float: left;padding: 0;">
-                   <div>明天</div>
-                   <div>18℃-36℃</div>
-                   <div>阴转晴
-                       <span class="icon-cloudy" style="margin-left: 0.5rem"></span>
+                   <div id="thirdDay">明天</div>
+                   <div id="thirdWen">18℃-36℃</div>
+                   <div><span id="thirdType">阴转晴</span>
+                       <span id="thirdIcon" class="icon-cloudy" style="margin-left: 0.5rem"></span>
                    </div>
                </div>
            </div>
@@ -152,7 +153,7 @@
       <div style="width:7vw;height: 13vh;float: left;margin-left: 1vw" id="dashboard3"></div>
     </div>
     <!--分割线-->
-    <div class="rightcut-off">
+<!--    <div class="rightcut-off">
         <div style="width:  98%;height: 2px;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
         <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 10vw">视频监控</span>
         <i class="fa fa-angle-double-left pull-right"></i>
@@ -168,7 +169,7 @@
             <param name='controls' value='true' />
         </object>
 
-    </div>
+    </div>-->
 </div>
 
 </body>

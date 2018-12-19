@@ -97,20 +97,20 @@ ul {
  }
 .leftMenu .bar {
     width: 24vw;
-    height: 15vh;
+    height: 23.5vh;
 }
 .leftMenu .Map {
     width: 24vw;
-    height: 22vh;
+    height: 32vh;
 }
 .leftMenu .graph {
     width: 24vw;
-    height: 13vh;
+    height: 18vh;
 }
-.leftMenu .line {
-    width: 24vw;
-    height: 16vh;
-}
+/*.leftMenu .line {*/
+    /*width: 24vw;*/
+    /*height: 16vh;*/
+/*}*/
 /*右侧*/
 .rightMenu{
     position: absolute;
@@ -132,26 +132,29 @@ ul {
 }
 .rightMenu .weather {
     width: 24vw;
-    height: 15vh;
+    height:20vh;
     color: #3EAACC;
     text-align: center;
 }
 .rightMenu .weather .weatherIcon,.wind{
     margin-left: 1.5vw;
 }
+.rightMenu .weather .today{
+    margin-top: 1.5rem;
+}
 .rightMenu .weather .tomorrow {
     font-size: 0.9rem;
-    margin-top:0.7rem
+    margin-top:2rem
 }
 .rightMenu .pie {
     width: 24vw;
-    height: 22vh;
+    height: 32.5vh;
 }
 .rightMenu .dashboard {
     width: 24vw;
-    height: 13vh;
-}
-.rightMenu .video{
-    width: 24vw;
     height: 18vh;
 }
+/*.rightMenu .video{*/
+    /*width: 24vw;*/
+    /*height: 18vh;*/
+/*}*/

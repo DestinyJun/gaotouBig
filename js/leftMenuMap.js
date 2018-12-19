@@ -263,7 +263,7 @@ function Bmap(myChart) {
                     type: 'map',
                     map: 'zhongguo',
                     geoIndex: 0,
-                    aspectScale: 0.75, //长宽比
+                    aspectScale: 1.4, //长宽比
                     showLegendSymbol: false, // 存在legend时显示
                     label: {
                         normal: {

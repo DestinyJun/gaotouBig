@@ -16,7 +16,7 @@ function pie(mycharts) {
             {
                 name: '车流类型',
                 type: 'pie',
-                radius : '75%',
+                radius : '79%',
                 center: ['50%', '60%'],
                 data:[
                     {value:1648, name:'小汽车'},
