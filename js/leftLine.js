@@ -189,7 +189,7 @@ function line(mychart) {
                 symbol: 'rect',
                 itemStyle: {
                     normal: {
-                        color: 'rgba(54,215,182,0.27)'
+                        color: '#4890A5'
                     }
                 },
                 barWidth: 10,
@@ -227,11 +227,11 @@ function line(mychart) {
                 itemStyle: {
                     normal: {
                         barBorderRadius: 5,
-                        color: '#288695'
+                        color: '#007CA0'
                     }
                 },
                 symbolRepeat: true,
-                symbolSize: [2,10],
+                symbolSize: [3,10],
                 data: thisYearData[timeLineData[0]],
                 animationEasing: 'elasticOut',
                 animationDelay: function (dataIndex, params) {

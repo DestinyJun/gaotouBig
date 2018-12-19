@@ -35,7 +35,7 @@ function displayTime() {
     var day = nowDate.getDate();
     var week = nowDate.getDay();
     var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-    var timestr = year + ' ' + month + ' ' + day;
+    var timestr = year + '/' + month + '/' + day;
     date.innerHTML= timestr;
     nowWeek.innerHTML = weekday[week];
     // document.write("今天是：" + );

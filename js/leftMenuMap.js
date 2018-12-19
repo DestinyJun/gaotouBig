@@ -14,6 +14,7 @@ function Bmap(myChart) {
             "黑龙江": [126.629804, 45.774197],
             "四川": [104.112035, 30.630737],
             "安徽": [117.321109, 31.850184],
+            "贵州": [106.663601,26.647641],
         };
         var data = [{
             name: '海南',
@@ -36,6 +37,10 @@ function Bmap(myChart) {
                 value: 8230
             },
             {
+                name: '贵州',
+                value: 18230
+            },
+            {
                 name: '湖南',
                 value: 8173
             },
@@ -54,6 +59,90 @@ function Bmap(myChart) {
             {
                 name: '安徽',
                 value: 5930
+            },
+            {
+                name: '浙江',
+                value: 0
+            },
+            {
+                name: '福建',
+                value: 0
+            },
+            {
+                name: '新疆',
+                value: 0
+            },
+            {
+                name: '西藏',
+                value: 0
+            },
+            {
+                name: '青海',
+                value: 0
+            },
+            {
+                name: '甘肃',
+                value: 0
+            },
+            {
+                name: '青海',
+                value: 0
+            },
+            {
+                name: '宁夏',
+                value: 0
+            },
+            {
+                name: '内蒙古',
+                value: 0
+            },
+            {
+                name: '陕西',
+                value: 0
+            },
+            {
+                name: '山东',
+                value: 0
+            },
+            {
+                name: '辽宁',
+                value: 0
+            },
+            {
+                name: '吉林',
+                value: 0
+            },
+            {
+                name: '江苏',
+                value: 0
+            },
+            {
+                name: '广西',
+                value: 0
+            },
+            {
+                name: '台湾',
+                value: 0
+            },
+            {
+                name: '云南',
+                value: 0
+            },
+            {
+                name: '山西',
+                value: 0
+            },
+            {
+                name: '重庆',
+                value: 0
+            },
+            {
+                name: '天津',
+                value: 0
+            },
+            {
+                name: '北京',
+                value: 0
             },
         ];
         var max = 100000,
@@ -74,9 +163,6 @@ function Bmap(myChart) {
             }
             return res;
         };
-
-        console.log(convertData(data));
-
         option = {
             title: {
                 textStyle: {
@@ -86,10 +172,10 @@ function Bmap(myChart) {
             tooltip: {
                 trigger: 'item',
                 formatter: function(params) {
-                    if (typeof(params.value)[2] === "undefined") {
-                        return params.name + ' : ' + params.value;
+                    if (typeof(params.value)[2] === 'undefined') {
+                        return params.name + ' : ' + params.value+'人';
                     } else {
-                        return params.name + ' : ' + params.value[2];
+                        return params.name + ' : ' + params.value[2]+'人';
                     }
                 }
             },
@@ -115,7 +201,7 @@ function Bmap(myChart) {
                     // color: ['#3B5077', '#031525'] // 蓝黑
                     // color: ['#ffc0cb', '#800080'] // 红紫
                     // color: ['#3C3B3F', '#605C3C'] // 黑绿
-                    color: ['#0f0c29', '#302b63', '#24243e'] // 黑紫黑
+                    color: ['#15B2D8', '#83AAB7', '#0D95B7'] // 黑紫黑
                     // color: ['#23074d', '#cc5333'] // 紫红
                     // color: ['#00467F', '#A5CC82'] // 蓝绿
                     // color: ['#1488CC', '#2B32B2'] // 浅蓝
@@ -126,20 +212,10 @@ function Bmap(myChart) {
 
                 }
             },
-            // toolbox: {
-            //     show: true,
-            //     orient: 'vertical',
-            //     left: 'right',
-            //     top: 'center',
-            //     feature: {
-            //             dataView: {readOnly: false},
-            //             restore: {},
-            //             saveAsImage: {}
-            //             }
-            // },
             geo: {
                 show: true,
                 map: 'zhongguo',
+                zoom:'1.5',
                 label: {
                     normal: {
                         show: false
@@ -151,11 +227,11 @@ function Bmap(myChart) {
                 roam: true,
                 itemStyle: {
                     normal: {
-                        areaColor: '#031525',
+                        areaColor: '#2B91B7',
                         borderColor: '#3B5077',
                     },
                     emphasis: {
-                        areaColor: '#2B91B7',
+                        areaColor: '#0A83A0',
                     }
                 }
             },
@@ -179,13 +255,13 @@ function Bmap(myChart) {
                 },
                 itemStyle: {
                     normal: {
-                        color: '#05C3F9'
+                        color: '#FFF'
                     }
                 }
             },
                 {
                     type: 'map',
-                    map: 'china',
+                    map: 'zhongguo',
                     geoIndex: 0,
                     aspectScale: 0.75, //长宽比
                     showLegendSymbol: false, // 存在legend时显示

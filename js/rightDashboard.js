@@ -6,16 +6,22 @@ function  dashboard1(mychart) {
         series: [
             {
                 type: 'gauge',
-                startAngle:'220',
-                endAngle:'220',
+                startAngle:'360',
+                endAngle:'360',
                 detail: {
                     formatter:'{value}%',
                     fontSize:10,
                     offsetCenter:'50%'
                 },
                 axisLine:{
+                    lineStyle: {
+                        width: 6,
+                        color: [[0,'#0D89AD'],[1,'#0D89AD']]
+                    }
+                },
+                axisTick:{
                     lineStyle:{
-                        width:6,
+                        color:'#71A7B7'
                     }
                 },
                 data: [{value: 0}],
@@ -32,7 +38,7 @@ function  dashboard1(mychart) {
 
     setInterval(function () {
         option.series[0].endAngle = (Math.random() * 100).toFixed(2) - 0;
-        option.series[0].data[0].value = (100-option.series[0].endAngle).toFixed(2) - 0;
+        option.series[0].data[0].value =((360-option.series[0].endAngle)/3.6).toFixed(2);
         mychart.setOption(option, true);
     },2000);
     mychart.setOption(option,true);
@@ -45,8 +51,8 @@ function  dashboard2(mychart) {
         series: [
             {
                 type: 'gauge',
-                startAngle:'270',
-                endAngle:'270',
+                startAngle:'360',
+                endAngle:'360',
                 detail: {
                     formatter:'{value}%',
                     fontSize:10,
@@ -55,6 +61,12 @@ function  dashboard2(mychart) {
                 axisLine:{
                     lineStyle:{
                         width:6,
+                        color: [[0,'#0D89AD'],[1,'#0D89AD']]
+                    }
+                },
+                axisTick:{
+                    lineStyle:{
+                        color:'#71A7B7'
                     }
                 },
                 data: [{value: 0}],
@@ -71,7 +83,7 @@ function  dashboard2(mychart) {
 
     setInterval(function () {
         option.series[0].endAngle = (Math.random() * 100).toFixed(2) - 0;
-        option.series[0].data[0].value = (100-option.series[0].endAngle).toFixed(2) - 0;
+        option.series[0].data[0].value = ((360-option.series[0].endAngle)/3.6).toFixed(2);
         mychart.setOption(option, true);
     },2000);
     mychart.setOption(option,true);
@@ -94,12 +106,21 @@ function  dashboard3(mychart) {
                 axisLine:{
                     lineStyle:{
                         width:6,
+                        color: [[0,'#0D89AD'],[1,'#0D89AD']]
+                    }
+                },
+                axisTick:{
+                    lineStyle:{
+                        color:'#71A7B7'
                     }
                 },
                 data: [{value: 0}],
                 splitLine:{
                     show:'false',
                     length:0,
+                },
+                label:{
+                    name:'厕所使用率'
                 },
                 pointer:'false',
                 axisLabel:'false'
@@ -110,7 +131,7 @@ function  dashboard3(mychart) {
 
     setInterval(function () {
         option.series[0].endAngle = (Math.random() * 100).toFixed(2) - 0;
-        option.series[0].data[0].value = (option.series[0].endAngle);
+        option.series[0].data[0].value = ((360-option.series[0].endAngle)/3.6).toFixed(2);
         mychart.setOption(option, true);
     },2000);
     mychart.setOption(option,true);

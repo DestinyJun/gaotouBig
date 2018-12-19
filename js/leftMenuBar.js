@@ -8,7 +8,7 @@ function bar(myBar) {
             }
         },
         grid: {
-            left: 0,
+            left: 10,
             right: 10,
             bottom: 1,
             top: 10,
@@ -50,23 +50,14 @@ function bar(myBar) {
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 1, 0,
                             [
-                                {offset: 0.2, color: '#399BB9'},
-                                {offset: 0.4, color: '#55A0B7'},
-                                {offset: 0.6, color: '#71A7B7'},
-                                {offset: 1, color: '#83AAB7'},
+                                {offset: 0.2, color: '#087993'},
+                                {offset: 0.4, color: '#0A8EAF'},
+                                {offset: 0.6, color: '#2493AF'},
+                                {offset: 1, color: '#48AFCB'},
                             ]
                         )
                     },
                 },
-                // emphasis: {
-                //     color: new echarts.graphic.LinearGradient(
-                //         0, 0, 0, 1,
-                //         [
-                //             {offset: 0.5, color: '#3EAACC'},
-                //             {offset: 1, color: '#fff'}
-                //         ]
-                //     )
-                // }
             },
         ]
     };
