@@ -36,6 +36,10 @@ ul {
     line-height: 3vh;
     overflow: hidden;
 }
+/*移除百度地图logo*/
+.anchorBL{
+    display:none
+}
 /*header*/
 .home .right>ul>li {
     float: left;
@@ -58,11 +62,10 @@ ul {
     height: 100vh;
 }
 .menu{
-    background: #0C1212;
+    background: rgba(69,69,69,0.3);
     width: 25vw;
     height: 94vh;
     margin-top: 6vh;
-    opacity: 0.9;
     border:1px solid #2B2B2B;
 }
 /*分割线*/

@@ -1,8 +1,15 @@
-function  dashboard1(mychart) {
+function  dashboard1(mychart,name) {
    const option = {
         tooltip : {
             formatter: "{a} <br/>{b} : {c}%"
         },
+       grid: {
+                   left: 0,
+                   right: 0,
+                   bottom: '20%',
+                   top: 0,
+                   containLabel: true
+               },
         series: [
             {
                 type: 'gauge',
@@ -24,13 +31,17 @@ function  dashboard1(mychart) {
                         color:'#71A7B7'
                     }
                 },
-                data: [{value: 0}],
+                data: [{value: 0,name:name}],
                 splitLine:{
                     show:'false',
                     length:0,
                 },
                 pointer:'false',
-                axisLabel:'false'
+                axisLabel:'false',
+                title:{
+                    offsetCenter:[0,'140%'],
+                    color:'#3EAACC'
+                }
             },
 
         ]
@@ -43,10 +54,17 @@ function  dashboard1(mychart) {
     },2000);
     mychart.setOption(option,true);
 }
-function  dashboard2(mychart) {
+function  dashboard2(mychart,name) {
     const option = {
         tooltip : {
             formatter: "{a} <br/>{b} : {c}%"
+        },
+        grid: {
+            left: 0,
+            right: 0,
+            bottom: '20%',
+            top: 0,
+            containLabel: true
         },
         series: [
             {
@@ -69,13 +87,17 @@ function  dashboard2(mychart) {
                         color:'#71A7B7'
                     }
                 },
-                data: [{value: 0}],
+                data: [{value: 0,name:name}],
                 splitLine:{
                     show:'false',
                     length:0,
                 },
                 pointer:'false',
-                axisLabel:'false'
+                axisLabel:'false',
+                title: {
+                    offsetCenter:[0,'140%'],
+                    color:'#3EAACC'
+                }
             },
 
         ]
@@ -88,11 +110,18 @@ function  dashboard2(mychart) {
     },2000);
     mychart.setOption(option,true);
 }
-function  dashboard3(mychart) {
+function  dashboard3(mychart,name) {
    const option = {
         tooltip : {
             formatter: "{a} <br/>{b} : {c}%"
         },
+       grid: {
+           left: 0,
+           right: 0,
+           bottom: '20%',
+           top: 0,
+           containLabel: true
+       },
         series: [
             {
                 type: 'gauge',
@@ -114,7 +143,7 @@ function  dashboard3(mychart) {
                         color:'#71A7B7'
                     }
                 },
-                data: [{value: 0}],
+                data: [{value: 0,name:name}],
                 splitLine:{
                     show:'false',
                     length:0,
@@ -123,7 +152,11 @@ function  dashboard3(mychart) {
                     name:'厕所使用率'
                 },
                 pointer:'false',
-                axisLabel:'false'
+                axisLabel:'false',
+                title: {
+                    offsetCenter:[0,'140%'],
+                    color:'#3EAACC'
+                }
             },
 
         ]

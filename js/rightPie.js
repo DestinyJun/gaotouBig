@@ -9,14 +9,14 @@ function pie(mycharts) {
         },
         tooltip : {
             trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
+            formatter: "{a}<br/>{b} : {c} ({d}%)"
         },
         color:['#0393B7','#1FA5C6','#0DA7CE','#31ADC9'],
         series : [
             {
                 name: '车流类型',
                 type: 'pie',
-                radius : '79%',
+                radius : '65%',
                 center: ['50%', '60%'],
                 data:[
                     {value:1648, name:'小汽车'},
@@ -30,6 +30,9 @@ function pie(mycharts) {
                         shadowOffsetX: 0,
                         shadowColor: 'rgba(0, 0, 0, 0.5)'
                     }
+                },
+                label:{
+                    formatter: "{b}({d}%)",
                 }
             }
         ]
