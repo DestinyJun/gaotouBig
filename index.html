@@ -41,61 +41,70 @@
     </div>
 </div>
 <!--左侧-->
-<div class="leftMenu menu">
+<!--<div class="leftMenu menu">-->
     <!--//左侧头部人流量统计-->
-    <div class="title">
-      <i class="fa fa-user pull-left" style="margin-left: 0.5rem"></i>
-      <span class="title-left" >今日累计客流：<span id="user">132</span></span>
-      <span class="title-left"  style="margin-left: 0.8rem">平均滞留时间：<span id="userTime">2小时30分</span></span>
-      <i class="fa fa-angle-double-left pull-right"></i>
-      <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
-
-  </div>
-    <!--1、柱状图-->
-    <div class="bar" id="bar"></div>
-    <!--分割线-->
-    <div class="leftcut-off">
-        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
-        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 10vw">人流分布</span>
-        <i class="fa fa-angle-double-right pull-right"></i>
-    </div>
-    <!--2、地图-->
-    <div class="Map" id="Map"></div>
-    <!--分割线-->
-    <div class="leftcut-off">
-        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
-        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 10vw">厕所使用率</span>
+<div>
+    <div class="title leftMenu">
+        <i class="fa fa-user pull-left" style="margin-left: 0.5rem"></i>
+        <span class="title-left" >今日累计客流：<span id="user" style="color: #fff">132</span></span>
+        <span class="title-left"  style="margin-left: 0.8rem">平均滞留时间：<span id="userTime" style="color: #fff">2小时30分</span></span>
         <i class="fa fa-angle-double-left pull-right"></i>
+        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+        <div class="lt"></div>
+        <div class="rt"></div>
+        <div class="rb"></div>
+        <div class="lb"></div>
+    </div>
+    <!--1、柱状图-->
+    <div class="bar leftMenu" >
+        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">人流分布排名</div>
+        <div style="width: 24vw;height: 20vh" id="bar"></div>
+        <div class="lt"></div>
+        <div class="rt"></div>
+        <div class="rb"></div>
+        <div class="lb"></div>
+    </div>
+    <!--分割线-->
+    <!--2、地图-->
+    <div class="Map leftMenu" >
+        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">人流分布</div>
+        <div style="width: 24vw;height:28vh" id="Map"></div>
+        <div class="lt"></div>
+        <div class="rt"></div>
+        <div class="rb"></div>
+        <div class="lb"></div>
     </div>
     <!--3、仪表盘-->
-    <div class="graph">
+    <div class="graph leftMenu">
+        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">厕所使用率</div>
         <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="graph1"></div>
         <div style="width:7vw;height: 17vh;float: left;margin-left: 4vw" id="graph2"></div>
+        <div class="lt"></div>
+        <div class="rt"></div>
+        <div class="rb"></div>
+        <div class="lb"></div>
     </div>
-    <!--分割线-->
-<!--    <div class="leftcut-off">
-        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
-        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 10vw">消 费 喜 好</span>
-        <i class="fa fa-angle-double-right pull-right"></i>
-    </div>
-    &lt;!&ndash;面积图&ndash;&gt;
-    <div class="line" id="line"></div>-->
+    <!--<div class="line" id="line"></div>-->
 </div>
 <!--右侧-->
-<div class="rightMenu menu">
-    <div class="title">
+<div>
+    <div class="title rightMenu">
         <i class="fa fa-car pull-left" style="margin-left: 0.5rem"></i>
-        <span class="title-left" >今日累计车流：<span id="car">524</span></span>
-        <span class="title-left"  style="margin-left: 0.5rem">平均滞留时间：<span id="carTime">2小时30分</span></span>
+        <span class="title-left" >今日累计车流：<span id="car" style="color: #fff">524</span></span>
+        <span class="title-left"  style="margin-left: 0.5rem">平均滞留时间：<span id="carTime" style="color: #fff">2小时30分</span></span>
         <i class="fa fa-angle-double-left pull-right"></i>
         <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
+        <div class="lt"></div>
+        <div class="rt"></div>
+        <div class="rb"></div>
+        <div class="lb"></div>
     </div>
     <!--1、天气-->
-    <div class="weather">
+    <div class="weather rightMenu">
        <div class="today">
            <span class="wen" id="wentoday">18℃-36℃</span>
            <span class="weatherIcon" id="typeToday">阴转晴</span>
-           <span id="todayicon" class="icon-cloudy" style="margin-left: 0.5rem"></span>
+           <span id="todayicon" class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem"></span>
            <span class="wind">风向</span>
            <span style="margin-left: 0.875rem" id="windToday">西南</span>
            <div style="width:  100%;height: 0.2vh;background: #3EAACC;margin: 2vh 0.5vw 0 0;opacity: 0.9"></div>
@@ -103,73 +112,59 @@
                <!--昨天-->
                <div class="col-md-3" style="float: left;padding: 0">
                    <div id="yesday">昨天</div>
-                   <div id="yeswen">18℃-36℃</div>
-                   <div><span id="yestype">阴转晴</span>
-                       <span class="icon-cloudy" style="margin-left: 0.5rem;width: 20vw" id="yesicon"></span>
+                   <div id="yeswen" style="color: #fff">18℃-36℃</div>
+                   <div><span id="yestype" style="color: #fff">阴转晴</span>
+                       <span class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem;color: #ffffff" id="yesicon"></span>
                    </div>
                </div>
                <div class="col-md-3" style="float: left ;padding: 0;">
                    <div id="firstDay">明天</div>
-                   <div id="firstWen">18℃-36℃</div>
-                   <div><span id="firstType">阴转晴</span>
-                        <span id="firstIcon" class="icon-cloudy" style="margin-left: 0.5rem"></span>
+                   <div id="firstWen" style="color: #fff">18℃-36℃</div>
+                   <div><span id="firstType" style="color: #fff">阴转晴</span>
+                        <span id="firstIcon" class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem"></span>
                    </div>
                </div>
                <div class="col-md-3" style="float: left;padding: 0;">
                    <div id="secondDay">明天</div>
-                   <div id="secondWen">18℃-36℃</div>
-                   <div> <span id="secondType">阴转晴</span>
-                       <span id="secondIcon" class="icon-cloudy" style="margin-left: 0.5rem"></span>
+                   <div id="secondWen" style="color: #fff">18℃-36℃</div>
+                   <div> <span id="secondType" style="color: #fff">阴转晴</span>
+                       <span id="secondIcon" class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem"></span>
                    </div>
                </div>
                <div class="col-md-3" style="float: left;padding: 0;">
                    <div id="thirdDay">明天</div>
-                   <div id="thirdWen">18℃-36℃</div>
-                   <div><span id="thirdType">阴转晴</span>
-                       <span id="thirdIcon" class="icon-cloudy" style="margin-left: 0.5rem"></span>
+                   <div id="thirdWen" style="color: #fff">18℃-36℃</div>
+                   <div><span id="thirdType" style="color: #fff">阴转晴</span>
+                       <span id="thirdIcon" class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem"></span>
                    </div>
                </div>
            </div>
        </div>
-    </div>
-    <!--分割线-->
-    <div class="rightcut-off">
-        <div style="width: 98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
-        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 10vw">车辆类型分布</span>
-        <i class="fa fa-angle-double-right pull-right"></i>
+        <div class="lt"></div>
+        <div class="rt"></div>
+        <div class="rb"></div>
+        <div class="lb"></div>
     </div>
     <!--2、车流饼状图-->
-    <div class="pie" id="pie"></div>
-    <!--分割线-->
-    <div class="rightcut-off">
-        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
-        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 10vw">车位使用率</span>
-        <i class="fa fa-angle-double-left pull-right"></i>
+    <div class="pie rightMenu">
+        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">车流类型分布</div>
+        <div style="width: 24vw;height: 30vh" id="pie"></div>
+        <div class="lt"></div>
+        <div class="rt"></div>
+        <div class="rb"></div>
+        <div class="lb"></div>
     </div>
     <!--3、仪表盘-->
-    <div class="dashboard">
+    <div class="dashboard rightMenu">
+      <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">车位使用率</div>
       <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="dashboard1"></div>
       <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="dashboard2"></div>
       <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="dashboard3"></div>
+      <div class="lt"></div>
+      <div class="rt"></div>
+      <div class="rb"></div>
+      <div class="lb"></div>
     </div>
-    <!--分割线-->
-<!--    <div class="rightcut-off">
-        <div style="width:  98%;height: 2px;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
-        <span style="color: #3EAACC;font-size: 0.875rem;margin-left: 10vw">视频监控</span>
-        <i class="fa fa-angle-double-left pull-right"></i>
-    </div>
-    <div id="video" class="video">
-        <object type='application/x-vlc-plugin'
-                pluginspage="rtsp://admin:Hik12345+@117.187.60.146:555/Streaming/Channels/1801?transportmode-unicast" id='vlc' events='false' width="100%" height="98%" style="margin-left: 0.5rem">
-            <param name='mrl' value='${url}' />
-            <param name='volume' value='50' />
-            <param name='autoplay' value='true' />
-            <param name='loop' value='false' />
-            <param name='fullscreen' value='true' />
-            <param name='controls' value='true' />
-        </object>
-
-    </div>-->
 </div>
 
 </body>

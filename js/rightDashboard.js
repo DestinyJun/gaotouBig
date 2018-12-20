@@ -40,7 +40,8 @@ function  dashboard1(mychart,name) {
                 axisLabel:'false',
                 title:{
                     offsetCenter:[0,'140%'],
-                    color:'#3EAACC'
+                    color:'#3EAACC',
+                    fontSize:14
                 }
             },
 
@@ -96,7 +97,8 @@ function  dashboard2(mychart,name) {
                 axisLabel:'false',
                 title: {
                     offsetCenter:[0,'140%'],
-                    color:'#3EAACC'
+                    color:'#3EAACC',
+                    fontSize:14
                 }
             },
 
@@ -155,7 +157,8 @@ function  dashboard3(mychart,name) {
                 axisLabel:'false',
                 title: {
                     offsetCenter:[0,'140%'],
-                    color:'#3EAACC'
+                    color:'#3EAACC',
+                    fontSize:14
                 }
             },
 

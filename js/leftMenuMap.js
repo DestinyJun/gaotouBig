@@ -145,10 +145,6 @@ function Bmap(myChart) {
                 value: 0
             },
         ];
-        var max = 100000,
-            min = 900; // todo
-        var maxSize4Pin = 100,
-            minSize4Pin = 20;
 
         var convertData = function(data) {
             var res = [];
@@ -169,6 +165,13 @@ function Bmap(myChart) {
                     color: '#ccc'
                 }
             },
+            // grid: {
+            //     left: 10,
+            //     right: 20,
+            //     bottom: 10,
+            //     top: 10,
+            //     containLabel: true
+            // },
             tooltip: {
                 trigger: 'item',
                 formatter: function(params) {
@@ -294,12 +297,7 @@ function Bmap(myChart) {
                     type: 'scatter',
                     coordinateSystem: 'geo',
                     symbol: 'pin',
-                    symbolSize: function(val) {
-                        var a = (maxSize4Pin - minSize4Pin) / (max - min);
-                        var b = minSize4Pin - a * min;
-                        b = maxSize4Pin - a * max;
-                        return a * val[2] + b;
-                    },
+                    symbolSize: 30,
                     label: {
                         normal: {
                             show: true,

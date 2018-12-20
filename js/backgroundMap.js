@@ -45,7 +45,7 @@ function map(myChart) {
                         'featureType': 'arterial',   //调整一些干道颜色
                         'elementType': 'geometry',
                         'stylers': {
-                            'color': '#FFFFFF'
+                            'color': '#797979'
                         }
                     },
                     {

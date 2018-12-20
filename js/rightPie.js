@@ -11,13 +11,13 @@ function pie(mycharts) {
             trigger: 'item',
             formatter: "{a}<br/>{b} : {c} ({d}%)"
         },
-        color:['#0393B7','#1FA5C6','#0DA7CE','#31ADC9'],
+        color:['#14A3C5','#B73462','#3EC7A9','#48DFF1'],
         series : [
             {
                 name: '车流类型',
                 type: 'pie',
-                radius : '65%',
-                center: ['50%', '60%'],
+                radius : '64%',
+                center: ['50%', '50%'],
                 data:[
                     {value:1648, name:'小汽车'},
                     {value:335, name:'客车'},
@@ -33,6 +33,12 @@ function pie(mycharts) {
                 },
                 label:{
                     formatter: "{b}({d}%)",
+                    color: '#14A3C5'
+                },
+                labelLine:{
+                    lineStyle: {
+                        color: '#14A3C5',
+                    }
                 }
             }
         ]

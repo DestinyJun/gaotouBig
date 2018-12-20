@@ -12,65 +12,68 @@ var weatherJosn;
             //步骤五 如果能够进到这个判断 说明 数据 完美的回来了,并且请求的页面是存在的
             // console.log(ajax.responseText);//输入相应的内容
             // console.log(ajax.responseText);
-            weatherJosn = JSON.parse(ajax.responseText);
-            //昨天
-            var yestype = document.getElementById('yestype');
-            var yesday= document.getElementById('yesday');
-            var yeswen= document.getElementById('yeswen');
-            var yesicon= document.getElementById('yesicon');
-            var lowyeswen = weatherJosn.data.yesterday.low.toString();
-            var highyeswen = weatherJosn.data.yesterday.high.toString();
-            yestype.innerText=weatherJosn.data.yesterday.type;
-            yesday.innerText=weatherJosn.data.yesterday.date;
-            yeswen.innerText=lowyeswen.substring(lowyeswen.length-3,lowyeswen.length)+'-'+highyeswen.substring(highyeswen.length-3,highyeswen.length);
-            icon(weatherJosn.data.yesterday.type,yesicon);
+            if (ajax.responseText) {
+                weatherJosn = JSON.parse(ajax.responseText);
+                //昨天
+                var yestype = document.getElementById('yestype');
+                var yesday= document.getElementById('yesday');
+                var yeswen= document.getElementById('yeswen');
+                var yesicon= document.getElementById('yesicon');
+                var lowyeswen = weatherJosn.data.yesterday.low.toString();
+                var highyeswen = weatherJosn.data.yesterday.high.toString();
+                yestype.innerText=weatherJosn.data.yesterday.type;
+                yesday.innerText=weatherJosn.data.yesterday.date;
+                yeswen.innerText=lowyeswen.substring(lowyeswen.length-3,lowyeswen.length)+'-'+highyeswen.substring(highyeswen.length-3,highyeswen.length);
+                icon(weatherJosn.data.yesterday.type,yesicon);
 
-            //今天
-            var wentoday = document.getElementById('wentoday');
-            var typeToday = document.getElementById('typeToday');
-            var todayIcon = document.getElementById('todayicon');
-            var windToday = document.getElementById('windToday');
-            var lowwentoday = weatherJosn.data.forecast[0]['low'].toString();
-            var highwentoday = weatherJosn.data.forecast[0]['high'].toString();
-            windToday.innerText = weatherJosn.data.forecast[0]['fengxiang'];
-            wentoday.innerText = lowwentoday.substring(lowwentoday.length-3,lowwentoday.length)+'-'+highwentoday.substring(highwentoday.length-3,highwentoday.length);
-            typeToday.innerText = weatherJosn.data.forecast[0]['type'];
-            icon(weatherJosn.data.forecast[0]['type'],todayIcon);
+                //今天
+                var wentoday = document.getElementById('wentoday');
+                var typeToday = document.getElementById('typeToday');
+                var todayIcon = document.getElementById('todayicon');
+                var windToday = document.getElementById('windToday');
+                var lowwentoday = weatherJosn.data.forecast[0]['low'].toString();
+                var highwentoday = weatherJosn.data.forecast[0]['high'].toString();
+                windToday.innerText = weatherJosn.data.forecast[0]['fengxiang'];
+                wentoday.innerText = lowwentoday.substring(lowwentoday.length-3,lowwentoday.length)+'-'+highwentoday.substring(highwentoday.length-3,highwentoday.length);
+                typeToday.innerText = weatherJosn.data.forecast[0]['type'];
+                icon(weatherJosn.data.forecast[0]['type'],todayIcon);
 
-            //后天
-            var firstDay = document.getElementById('firstDay');
-            var firstWen = document.getElementById('firstWen');
-            var firstIcon = document.getElementById('firstIcon');
-            var firstType = document.getElementById('firstType');
-            var lowwenfirst = weatherJosn.data.forecast[1]['low'].toString();
-            var highwenfirst = weatherJosn.data.forecast[1]['high'].toString();
-            firstDay.innerText = weatherJosn.data.forecast[1]['date'];
-            firstWen.innerText = lowwenfirst.substring(lowwenfirst.length-3,lowwenfirst.length)+'-'+highwenfirst.substring(highwenfirst.length-3,highwenfirst.length);
-            firstType.innerText = weatherJosn.data.forecast[1]['type'];
-            icon(weatherJosn.data.forecast[1]['type'],firstIcon);
-            //大后天
-            var secondDay = document.getElementById('secondDay');
-            var secondWen = document.getElementById('secondWen');
-            var secondIcon = document.getElementById('secondIcon');
-            var secondType = document.getElementById('secondType');
-            var lowwensecond = weatherJosn.data.forecast[2]['low'].toString();
-            var highwensecond = weatherJosn.data.forecast[2]['high'].toString();
-            secondDay.innerText = weatherJosn.data.forecast[2]['date'];
-            secondWen.innerText = lowwensecond.substring(lowwensecond.length-3,lowwensecond.length)+'-'+highwensecond.substring(highwensecond.length-3,highwensecond.length);
-            secondType.innerText = weatherJosn.data.forecast[2]['type'];
-            icon(weatherJosn.data.forecast[2]['type'],secondIcon);
-            //大大后天
-            var thirdDay = document.getElementById('thirdDay');
-            var thirdWen = document.getElementById('thirdWen');
-            var thirdIcon = document.getElementById('thirdIcon');
-            var thirdType = document.getElementById('thirdType');
-            var lowwenthird = weatherJosn.data.forecast[3]['low'].toString();
-            var highwenthird = weatherJosn.data.forecast[3]['high'].toString();
-            thirdDay.innerText = weatherJosn.data.forecast[3]['date'];
-            thirdWen.innerText = lowwenthird.substring(lowwenthird.length-3,lowwenthird.length)+'-'+highwenthird.substring(highwenthird.length-3,highwenthird.length);
-            thirdType.innerText = weatherJosn.data.forecast[3]['type'];
-            icon(weatherJosn.data.forecast[3]['type'],thirdIcon);
+                //后天
+                var firstDay = document.getElementById('firstDay');
+                var firstWen = document.getElementById('firstWen');
+                var firstIcon = document.getElementById('firstIcon');
+                var firstType = document.getElementById('firstType');
+                var lowwenfirst = weatherJosn.data.forecast[1]['low'].toString();
+                var highwenfirst = weatherJosn.data.forecast[1]['high'].toString();
+                firstDay.innerText = weatherJosn.data.forecast[1]['date'];
+                firstWen.innerText = lowwenfirst.substring(lowwenfirst.length-3,lowwenfirst.length)+'-'+highwenfirst.substring(highwenfirst.length-3,highwenfirst.length);
+                firstType.innerText = weatherJosn.data.forecast[1]['type'];
+                icon(weatherJosn.data.forecast[1]['type'],firstIcon);
+                //大后天
+                var secondDay = document.getElementById('secondDay');
+                var secondWen = document.getElementById('secondWen');
+                var secondIcon = document.getElementById('secondIcon');
+                var secondType = document.getElementById('secondType');
+                var lowwensecond = weatherJosn.data.forecast[2]['low'].toString();
+                var highwensecond = weatherJosn.data.forecast[2]['high'].toString();
+                secondDay.innerText = weatherJosn.data.forecast[2]['date'];
+                secondWen.innerText = lowwensecond.substring(lowwensecond.length-3,lowwensecond.length)+'-'+highwensecond.substring(highwensecond.length-3,highwensecond.length);
+                secondType.innerText = weatherJosn.data.forecast[2]['type'];
+                icon(weatherJosn.data.forecast[2]['type'],secondIcon);
+                //大大后天
+                var thirdDay = document.getElementById('thirdDay');
+                var thirdWen = document.getElementById('thirdWen');
+                var thirdIcon = document.getElementById('thirdIcon');
+                var thirdType = document.getElementById('thirdType');
+                var lowwenthird = weatherJosn.data.forecast[3]['low'].toString();
+                var highwenthird = weatherJosn.data.forecast[3]['high'].toString();
+                thirdDay.innerText = weatherJosn.data.forecast[3]['date'];
+                thirdWen.innerText = lowwenthird.substring(lowwenthird.length-3,lowwenthird.length)+'-'+highwenthird.substring(highwenthird.length-3,highwenthird.length);
+                thirdType.innerText = weatherJosn.data.forecast[3]['type'];
+                icon(weatherJosn.data.forecast[3]['type'],thirdIcon);
+            }
         }
+
     };
     function icon(type,id) {
         console.log(type);
