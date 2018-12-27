@@ -287,10 +287,9 @@ ul {
 /*}*/
  .weather {
     width: 24vw;
-    height:24vh;
-     color: #3EAACC;
+    height:24vh;color: #3EAACC;
     text-align: center;
-     margin-top: 17vh;
+    margin-top: 17vh;
 }
 
 .weather .weatherIcon,.wind{
@@ -405,6 +404,19 @@ ul {
     border-left: 1.5px solid rgba(0,211,231,0.5);
     left: -2px;
     bottom: -2px;
+}
+.bottom{
+    position: absolute;
+    right: 30vw;
+    bottom: 4vh;
+    width: 40vw;
+    height: 6vh;
+    color: #3EAACC;
+    background: rgba(19,24,24,0.5);
+    border: #3EAACC solid 1px;
+    line-height: 6vh;
+    text-align: center;
+    overflow: hidden;
 }
 /*.rightMenu .video{*/
     /*width: 24vw;*/

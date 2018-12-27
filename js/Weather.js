@@ -61,9 +61,9 @@ var weatherJosn;
                 secondType.innerText = weatherJosn.data.forecast[2]['type'];
                 icon(weatherJosn.data.forecast[2]['type'],secondIcon);
                 //大大后天
-                var thirdDay = document.getElementById('thirdDay');
-                var thirdWen = document.getElementById('thirdWen');
-                var thirdIcon = document.getElementById('thirdIcon');
+                var thirdDay = $('thirdDay');
+                var thirdWen = $('thirdWen');
+                var thirdIcon = $('thirdIcon');
                 var thirdType = document.getElementById('thirdType');
                 var lowwenthird = weatherJosn.data.forecast[3]['low'].toString();
                 var highwenthird = weatherJosn.data.forecast[3]['high'].toString();
@@ -76,18 +76,18 @@ var weatherJosn;
 
     };
     function icon(type,id) {
-        console.log(type);
         switch (type) {
             case '小雨':  id.className = 'icon-light-rain';break;
             case '中雨':  id.className = 'icon-moderate-rain';break;
             case '大雨':  id.className = 'icon-heavy-rain';break;
-            case '雪':  id.className = 'icon-snow';break;
+            case '小雪':  id.className = 'icon-snow';break;
             case '多云':  id.className = 'icon-cloudy';break;
             case '多云转晴':  id.className = 'icon-cloudy';break;
             case '晴':  id.className = 'icon-fine';break;
             case '雨夹雪':  id.className = 'icon-sleet';break;
             case '雷阵雨':  id.className = 'icon-thundershower';break;
-            case '阴':  id.className = 'icon-cloudy-sky ';break;
+            case '阴':  id.className = 'icon-cloudy-sky';break;
+            case '冻雨':  id.className = 'icon-heavy-rain';break;
             default:
                 break;
         }
