@@ -4,31 +4,35 @@
     width: 100vw;
     /*text-align: center;*/
     /*opacity: 0.9;*/
-    box-shadow: 0 10px 40px  rgba(28,39,41,0.8);
-    background: -moz-linear-gradient(top, #272727 0%, #181818 50%,#070707 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5D6464),color-stop(50%,#181818), color-stop(100%,#070707));
-    background: -webkit-linear-gradient(top, #272727 0%,#181818 50%,#070707 100%);
-    background: -o-linear-gradient(top, #272727 0%,#181818 50%,#070707 100%);
-    background: -ms-linear-gradient(top, #272727 0%,#181818 50%,#070707 100%);
-    background: linear-gradient(to bottom, #272727 0%, #181818 50%,#070707 100%);
+    box-shadow: 0 10px 40px rgba(28, 39, 41, 0.8);
+    background: -moz-linear-gradient(top, #272727 0%, #181818 50%, #070707 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5D6464), color-stop(50%, #181818), color-stop(100%, #070707));
+    background: -webkit-linear-gradient(top, #272727 0%, #181818 50%, #070707 100%);
+    background: -o-linear-gradient(top, #272727 0%, #181818 50%, #070707 100%);
+    background: -ms-linear-gradient(top, #272727 0%, #181818 50%, #070707 100%);
+    background: linear-gradient(to bottom, #272727 0%, #181818 50%, #070707 100%);
 }
+
 .left {
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     position: absolute;
 }
-.left h5{
+
+.left h5 {
     color: #31A0B4;
     line-height: 6vh;
     margin-left: 5vw;
 }
+
 .right {
     color: #ffffff;
     font-family: "微软雅黑", serif;
-    top:0;
-    right:0;
+    top: 0;
+    right: 0;
     position: absolute;
 }
+
 ul {
     list-style: none;
     padding: 0;
@@ -36,389 +40,486 @@ ul {
     line-height: 3vh;
     overflow: hidden;
 }
+
 /*移除百度地图logo*/
-.anchorBL{
-    display:none
+.anchorBL {
+    display: none
 }
+
 /*header*/
-.home .right>ul>li {
+.home .right > ul > li {
     float: left;
     margin-left: 2vw;
 }
-.home .right>ul>li>span {
+
+.home .right > ul > li > span {
     margin-top: 0.5vh;
     height: 2vh;
     display: block;
     font-size: 0.5rem;
     text-align: center;
 }
-.home .right>ul #time {
+
+.home .right > ul #time {
     font-size: 1.5rem;
     line-height: 6vh;
 }
+
 /*body*/
 .main {
     width: 100vw;
     height: 100vh;
 }
+
 .title {
     padding: 2vh 0;
     color: #3EAACC;
     font-size: 0.8rem;
     width: 24vw;
 }
-.title>.rt ,.rb, .lt, .lb {
-    width: 15px;
-    height: 15px;
+
+.title > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
     position: absolute;
 }
-.title .lt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.title .lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     top: -2px;
 }
-.title .rt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.title .rt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     top: -2px;
 }
-.title .rb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.title .rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     bottom: -2px;
 }
-.title .lb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.title .lb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     bottom: -2px;
 }
+
 .title .title-left {
     font-size: 0.8rem;
 }
-.title i{
+
+.title i {
     margin: 0.5vh 1vw 0.8vh 0;
 }
 
 /*左侧*/
-.leftMenu{
+.leftMenu {
     position: absolute;
     left: 0;
     top: 0;
-    box-shadow: 0 20px 50px  rgba(28,39,41,0.8) inset;
+    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
     margin-top: 8vh;
-    background: rgba(50,50,50,0.5);
+    background: rgba(50, 50, 50, 0.5);
     margin-left: 1vw;
 }
+
 .bar {
     width: 24vw;
     height: 24vh;
     margin-top: 17vh;
 
 }
-.bar>.rt ,.rb, .lt, .lb {
-    width: 15px;
-    height: 15px;
+
+.bar > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
     position: absolute;
 }
-.bar .lt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.bar .lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     top: -2px;
 }
-.bar .rt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.bar .rt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     top: -2px;
 }
-.bar .rb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.bar .rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     bottom: -2px;
 }
-.bar .lb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.bar .lb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     bottom: -2px;
 }
+
 .Map {
     width: 24vw;
     height: 32vh;
     margin-top: 43vh;
 }
-.Map>.rt ,.rb, .lt, .lb {
-    width: 15px;
-    height: 15px;
+
+.Map > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
     position: absolute;
 }
-.Map .lt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.Map .lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     top: -2px;
 }
-.Map .rt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.Map .rt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     top: -2px;
 }
-.Map .rb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.Map .rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     bottom: -2px;
 }
-.Map .lb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.Map .lb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     bottom: -2px;
 }
+
 .graph {
     width: 24vw;
     height: 21vh;
     margin-top: 77vh;
 }
-.graph>.rt ,.rb, .lt, .lb {
-    width: 15px;
-    height: 15px;
+
+.graph > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
     position: absolute;
 }
-.graph .lt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.graph .lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     top: -2px;
 }
-.graph .rt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.graph .rt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     top: -2px;
 }
-.graph .rb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.graph .rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     bottom: -2px;
 }
-.graph .lb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.graph .lb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     bottom: -2px;
 }
+
 /*.leftMenu .line {*/
-    /*width: 24vw;*/
-    /*height: 16vh;*/
+/*width: 24vw;*/
+/*height: 16vh;*/
 /*}*/
 /*右侧*/
-.rightMenu{
+.rightMenu {
     position: absolute;
     right: 0;
     top: 0;
-    box-shadow: 0 20px 50px  rgba(28,39,41,0.8) inset;
-    background: rgba(50,50,50,0.5);
+    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
+    background: rgba(50, 50, 50, 0.5);
     margin-top: 8vh;
     margin-right: 1vw;
 }
+
 /*.rightMenu:before{*/
-    /*content: '';*/
-    /*position: absolute;*/
-    /*right: 0;*/
-    /*top: 0;*/
-    /*margin-top: 8vh;*/
-    /*margin-right: 1vw;*/
-    /*width:10%;*/
-    /*height:2px;*/
-    /*background-color:#467C7B*/
+/*content: '';*/
+/*position: absolute;*/
+/*right: 0;*/
+/*top: 0;*/
+/*margin-top: 8vh;*/
+/*margin-right: 1vw;*/
+/*width:10%;*/
+/*height:2px;*/
+/*background-color:#467C7B*/
 /*}*/
 /*.title {*/
-    /*padding: 2vh 0;*/
-    /*color: #3EAACC;*/
-    /*font-size: 0.8rem;*/
+/*padding: 2vh 0;*/
+/*color: #3EAACC;*/
+/*font-size: 0.8rem;*/
 /*}*/
 /*.title .title-left {*/
-    /*font-size: 0.8rem;*/
+/*font-size: 0.8rem;*/
 
 /*}*/
 /*.title i{*/
-    /*margin: 0.5vh 1vw 0.8vh 0;*/
+/*margin: 0.5vh 1vw 0.8vh 0;*/
 /*}*/
 /*.title>.rt ,.rb, .lt, .lb {*/
-    /*width: 15px;*/
-    /*height: 15px;*/
-    /*position: absolute;*/
+/*width: 15px;*/
+/*height: 15px;*/
+/*position: absolute;*/
 /*}*/
 /*.title .lt{*/
-    /*border-top: 1.5px solid rgba(0,211,231,0.5);*/
-    /*border-left: 1.5px solid rgba(0,211,231,0.5);*/
-    /*left: -2px;*/
-    /*top: -2px;*/
+/*border-top: 1.5px solid rgba(0,211,231,0.5);*/
+/*border-left: 1.5px solid rgba(0,211,231,0.5);*/
+/*left: -2px;*/
+/*top: -2px;*/
 /*}*/
 /*.title .rt{*/
-    /*border-top: 1.5px solid rgba(0,211,231,0.5);*/
-    /*border-right: 1.5px solid rgba(0,211,231,0.5);*/
-    /*right: -2px;*/
-    /*top: -2px;*/
+/*border-top: 1.5px solid rgba(0,211,231,0.5);*/
+/*border-right: 1.5px solid rgba(0,211,231,0.5);*/
+/*right: -2px;*/
+/*top: -2px;*/
 /*}*/
 /*.title .rb{*/
-    /*border-bottom:1.5px solid rgba(0,211,231,0.5);*/
-    /*border-right: 1.5px solid rgba(0,211,231,0.5);*/
-    /*right: -2px;*/
-    /*bottom: -2px;*/
+/*border-bottom:1.5px solid rgba(0,211,231,0.5);*/
+/*border-right: 1.5px solid rgba(0,211,231,0.5);*/
+/*right: -2px;*/
+/*bottom: -2px;*/
 /*}*/
 /*.title .lb{*/
-    /*border-bottom:1.5px solid rgba(0,211,231,0.5);*/
-    /*border-left: 1.5px solid rgba(0,211,231,0.5);*/
-    /*left: -2px;*/
-    /*bottom: -2px;*/
+/*border-bottom:1.5px solid rgba(0,211,231,0.5);*/
+/*border-left: 1.5px solid rgba(0,211,231,0.5);*/
+/*left: -2px;*/
+/*bottom: -2px;*/
 /*}*/
 /*.title .title-left {*/
-    /*font-size: 0.8rem;*/
+/*font-size: 0.8rem;*/
 /*}*/
- .weather {
+.weather {
     width: 24vw;
-    height:24vh;color: #3EAACC;
+    height: 24vh;
+    color: #3EAACC;
     text-align: center;
     margin-top: 17vh;
 }
 
-.weather .weatherIcon,.wind{
+.weather .weatherIcon, .wind {
     margin-left: 1.5vw;
 }
-.weather .today{
+
+.weather .today {
     margin-top: 1.5rem;
 }
+
 .weather .tomorrow {
     font-size: 0.9rem;
-    margin-top:1.5rem
+    margin-top: 1.5rem
 }
-.weather>.rt ,.rb, .lt, .lb {
-    width: 15px;
-    height: 15px;
+
+.weather > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
     position: absolute;
 }
-.weather .lt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.weather .lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     top: -2px;
 }
-.weather .rt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.weather .rt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     top: -2px;
 }
-.weather .rb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.weather .rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     bottom: -2px;
 }
-.weather .lb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.weather .lb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     bottom: -2px;
 }
+
 .weather .title-left {
     font-size: 0.8rem;
 }
+
 .pie {
     width: 24vw;
     height: 32vh;
     margin-top: 43vh;
 }
-.pie>.rt ,.rb, .lt, .lb {
-    width: 15px;
-    height: 15px;
+
+.pie > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
     position: absolute;
 }
-.pie .lt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.pie .lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     top: -2px;
 }
-.pie .rt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.pie .rt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     top: -2px;
 }
-.pie .rb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.pie .rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     bottom: -2px;
 }
-.pie .lb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.pie .lb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     bottom: -2px;
 }
+
 .pie .title-left {
     font-size: 0.8rem;
 }
+
 .dashboard {
     width: 24vw;
     height: 21vh;
     margin-top: 77vh;
 }
-.dashboard>.rt ,.rb, .lt, .lb {
-    width: 15px;
-    height: 15px;
+
+.dashboard > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
     position: absolute;
 }
-.dashboard .lt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.dashboard .lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     top: -2px;
 }
-.dashboard .rt{
-    border-top: 1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.dashboard .rt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     top: -2px;
 }
-.dashboard .rb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-right: 1.5px solid rgba(0,211,231,0.5);
+
+.dashboard .rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     bottom: -2px;
 }
-.dashboard .lb{
-    border-bottom:1.5px solid rgba(0,211,231,0.5);
-    border-left: 1.5px solid rgba(0,211,231,0.5);
+
+.dashboard .lb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     bottom: -2px;
 }
-.bottom{
+
+.bottom {
     position: absolute;
     right: 30vw;
     bottom: 4vh;
     width: 40vw;
     height: 6vh;
+    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
+    background: rgba(50, 50, 50, 0.5);
+}
+
+.bottomDiv {
+    position: absolute;
+    overflow: hidden;
     color: #3EAACC;
-    background: rgba(19,24,24,0.5);
-    border: #3EAACC solid 1px;
     line-height: 6vh;
     text-align: center;
-    overflow: hidden;
+    width: 40vw;
+    height: 6vh;
 }
+
+.all {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+
+.lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
+    left: -2px;
+    top: -2px;
+}
+
+.rt {
+    border-top: 1px solid rgba(0, 211, 231, 0.5);
+    border-right: 1px solid rgba(0, 211, 231, 0.5);
+    right: -2px;
+    top: -2px;
+}
+
+.rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
+    right: -2px;
+    bottom: -2px;
+}
+
+.lb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
+    left: -2px;
+    bottom: -2px;
+}
+
 /*.rightMenu .video{*/
-    /*width: 24vw;*/
-    /*height: 18vh;*/
+/*width: 24vw;*/
+/*height: 18vh;*/
 /*}*/
