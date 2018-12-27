@@ -1,7 +1,7 @@
 
 var weatherJosn;
     //步骤一:创建异步对象
-    var ajax = new XMLHttpRequest();
+var ajax = new XMLHttpRequest();
 //步骤二:设置请求的url参数,参数一是请求的类型,参数二是请求的url,可以带参数,动态的传递参数starName到服务端
     ajax.open('get','http://wthrcdn.etouch.cn/weather_mini?citykey='+101260107);
 //步骤三:发送请求
@@ -61,9 +61,9 @@ var weatherJosn;
                 secondType.innerText = weatherJosn.data.forecast[2]['type'];
                 icon(weatherJosn.data.forecast[2]['type'],secondIcon);
                 //大大后天
-                var thirdDay = $('thirdDay');
-                var thirdWen = $('thirdWen');
-                var thirdIcon = $('thirdIcon');
+                var thirdDay = document.getElementById('thirdDay');
+                var thirdWen = document.getElementById('thirdWen');
+                var thirdIcon = document.getElementById('thirdIcon');
                 var thirdType = document.getElementById('thirdType');
                 var lowwenthird = weatherJosn.data.forecast[3]['low'].toString();
                 var highwenthird = weatherJosn.data.forecast[3]['high'].toString();
@@ -80,7 +80,7 @@ var weatherJosn;
             case '小雨':  id.className = 'icon-light-rain';break;
             case '中雨':  id.className = 'icon-moderate-rain';break;
             case '大雨':  id.className = 'icon-heavy-rain';break;
-            case '小雪':  id.className = 'icon-snow';break;
+            case '小雪':  id.className = 'icon-spit';break;
             case '多云':  id.className = 'icon-cloudy';break;
             case '多云转晴':  id.className = 'icon-cloudy';break;
             case '晴':  id.className = 'icon-fine';break;
