@@ -13,7 +13,7 @@ var ul = document.createElement('ul');
 div1.appendChild(ul);
 f();
 document.body.appendChild(div1);
-var speed = 40;
+var speed = 150;
 var MyMar=setInterval(Marquee,speed);
 div1.onmouseover=function(){clearInterval(MyMar)};
 div1.onmouseout=function(){MyMar=setInterval(Marquee,speed); };
