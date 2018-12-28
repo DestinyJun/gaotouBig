@@ -72,11 +72,14 @@ ul {
 }
 
 .title {
-    padding: 2vh 0;
+    padding: 1.5vh 0;
     color: #3EAACC;
-    font-size: 0.8rem;
+    font-size: 1rem;
     width: 24vw;
+    text-align: center;
 }
+
+
 
 .title > .rt, .rb, .lt, .lb {
     width: 10px;
@@ -113,7 +116,7 @@ ul {
 }
 
 .title .title-left {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .title i {
@@ -130,14 +133,21 @@ ul {
     background: rgba(50, 50, 50, 0.5);
     margin-left: 1vw;
 }
-
+::-webkit-scrollbar {display:none}
 .bar {
     width: 24vw;
     height: 24vh;
     margin-top: 17vh;
-
 }
-
+.basic {
+    width: 24vw;
+    height: 20vh;
+    /*overflow-x: hidden;*/
+    overflow: auto;
+    overflow-y: scroll;
+    text-align: center;
+    color: #3EAACC;
+}
 .bar > .rt, .rb, .lt, .lb {
     width: 10px;
     height: 10px;
@@ -465,7 +475,6 @@ ul {
     bottom: -2px;
 }
 
-
 /*中间底部文字滚动*/
 .bottom {
     position: absolute;
@@ -487,34 +496,44 @@ ul {
     height: 12vh;
     margin-left: 1rem;
 }
+
 .all {
     width: 10px;
     height: 10px;
     position: absolute;
 }
+
 .lt {
     border-top: 1.5px solid rgba(0, 211, 231, 0.5);
     border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     top: -2px;
 }
+
 .rt {
     border-top: 1.5px solid rgba(0, 211, 231, 0.5);
     border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     top: -2px;
 }
+
 .rb {
     border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
     border-right: 1.5px solid rgba(0, 211, 231, 0.5);
     right: -2px;
     bottom: -2px;
 }
+
 .lb {
     border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
     border-left: 1.5px solid rgba(0, 211, 231, 0.5);
     left: -2px;
     bottom: -2px;
+}
+li {
+    line-height: 1.5rem;
+    text-indent: 2rem;
+    font-style: normal;
 }
 
 /*.rightMenu .video{*/
