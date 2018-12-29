@@ -135,7 +135,7 @@ for (var i = 0; i < json.length; i++) {
         left.className = 'col-md-6'+' '+'col-lg-6';
         left.style.padding = '0';
         leftspan.className='pull-left';
-        leftspan.style.marginLeft='1vw';
+        leftspan.style.marginLeft='1.4vw';
         div.appendChild(left);
         left.appendChild(leftspan);
         leftspan.innerText = json[i].header+json[i].value;
