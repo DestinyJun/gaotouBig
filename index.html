@@ -10,12 +10,7 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="./css/icomoon/style.css">
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=12DDKEKWABDKneKfibVKefTNcyHRosT8"></script>
-    <script src="./node_modules/echarts/dist/echarts.js"></script>
-    <script src="./node_modules/echarts/dist/extension/bmap.js"></script>
-    <script src='./node_modules/echarts/map/js/china.js'></script>
+
 </head>
 <body>
 <!--背景-->
@@ -58,12 +53,16 @@
     <!--1、资本信息-->
     <div class="bar leftMenu">
         <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">基本信息</div>
-        <div class="basic" >
-            <div style="width: 24vw;">
-                <span class="pull-left" style="margin-left: 0.5rem">经度：<span>160.705393</span></span>
-                <span class="pull-left" style="margin-left: 4rem">维度：<span>160.705393</span></span>
-            </div>
-            <div style="width: 24vw;">
+        <div class="basic" id="basic">
+            <!--<div class="row">-->
+                <!--<div class="col-md-6">-->
+                    <!--<span>经度：<span>160.705393</span></span>-->
+                <!--</div>-->
+                <!--<div class="col-md-6">-->
+                    <!--<span>维度：<span>160.705393</span></span>-->
+                <!--</div>-->
+            <!--</div>-->
+           <!-- <div style="width: 24vw;">
                 <span class="pull-left" style="margin-left: 0.5rem">占地面积：<span>160.705393</span></span>
                 <span class="pull-left" style="margin-left: 2rem">始建时间：<span>2013-10-13</span></span>
             </div>
@@ -86,7 +85,7 @@
             <div style="width: 24vw;">
                 <span class="pull-left" style="margin-left: 0.5rem">客车车位：<span>300</span></span>
                 <span class="pull-left" style="margin-left: 5.2rem">货车车位：<span>200</span></span>
-            </div>
+            </div>-->
         </div>
         <div class="lt"></div>
         <div class="rt"></div>
@@ -204,6 +203,12 @@
   <!--<span>123</span>-->
 <!--</div>-->
 </body>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=12DDKEKWABDKneKfibVKefTNcyHRosT8"></script>
+<script src="./node_modules/echarts/dist/echarts.js"></script>
+<script src="./node_modules/echarts/dist/extension/bmap.js"></script>
+<script src='./node_modules/echarts/map/js/china.js'></script>
 <script src="js/rightPie.js"></script>
 <script src="js/backgroundMap.js"></script>
 <script src="js/leftMenuBar.js"></script>
