@@ -10,12 +10,7 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="./css/icomoon/style.css">
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=12DDKEKWABDKneKfibVKefTNcyHRosT8"></script>
-    <script src="./node_modules/echarts/dist/echarts.js"></script>
-    <script src="./node_modules/echarts/dist/extension/bmap.js"></script>
-    <script src='./node_modules/echarts/map/js/china.js'></script>
+
 </head>
 <body>
 <!--背景-->
@@ -45,26 +40,57 @@
     <!--//左侧头部人流量统计-->
 <div>
     <div class="title leftMenu">
-        <i class="fa fa-user pull-left" style="margin-left: 0.5rem"></i>
+        <i class="fa fa-user" style="text-align: center"></i>
         <span class="title-left" >今日累计客流：<span id="user" style="color: #fff">132</span></span>
-        <span class="title-left"  style="margin-left: 0.8rem">平均滞留时间：<span id="userTime" style="color: #fff">2小时30分</span></span>
+        <!--<span class="title-left"  style="margin-left: 0.8rem">平均滞留时间：<span id="userTime" style="color: #fff">2小时30分</span></span>-->
         <i class="fa fa-angle-double-left pull-right"></i>
-        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
         <div class="lt"></div>
         <div class="rt"></div>
         <div class="rb"></div>
         <div class="lb"></div>
     </div>
-    <!--1、柱状图-->
-    <div class="bar leftMenu" >
-        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">人流分布排名</div>
-        <div style="width: 24vw;height: 20vh" id="bar"></div>
+    <!--1、资本信息-->
+    <div class="bar leftMenu">
+        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">基本信息</div>
+        <div class="basic" id="basic">
+            <!--<div class="row">-->
+                <!--<div class="col-md-6">-->
+                    <!--<span>经度：<span>160.705393</span></span>-->
+                <!--</div>-->
+                <!--<div class="col-md-6">-->
+                    <!--<span>维度：<span>160.705393</span></span>-->
+                <!--</div>-->
+            <!--</div>-->
+           <!-- <div style="width: 24vw;">
+                <span class="pull-left" style="margin-left: 0.5rem">占地面积：<span>160.705393</span></span>
+                <span class="pull-left" style="margin-left: 2rem">始建时间：<span>2013-10-13</span></span>
+            </div>
+            <div style="width: 24vw;">
+                <span class="pull-left" style="margin-left: 0.5rem">区长电话：<span>18311563380</span></span>
+                <span class="pull-left" style="margin-left: 1rem">运营时间：<span>2018-07-18</span></span>
+            </div>
+            <div style="width: 24vw;">
+                <span class="pull-left" style="margin-left: 0.5rem">供电账户：<span>久长服务区</span></span>
+                <span class="pull-left" style="margin-left: 2rem">用水量：<span>5448</span></span>
+            </div>
+            <div style="width: 24vw;">
+                <span class="pull-left" style="margin-left: 0.5rem">保洁人员：<span>15</span></span>
+                <span class="pull-left" style="margin-left: 6rem">安保人员：<span>20</span></span>
+            </div>
+            <div style="width: 24vw;">
+                <span class="pull-left" style="margin-left: 0.5rem">大车车位：<span>200</span></span>
+                <span class="pull-left" style="margin-left: 5.2rem">小车车位：<span>300</span></span>
+            </div>
+            <div style="width: 24vw;">
+                <span class="pull-left" style="margin-left: 0.5rem">客车车位：<span>300</span></span>
+                <span class="pull-left" style="margin-left: 5.2rem">货车车位：<span>200</span></span>
+            </div>-->
+        </div>
         <div class="lt"></div>
         <div class="rt"></div>
         <div class="rb"></div>
         <div class="lb"></div>
     </div>
-    <!--分割线-->
     <!--2、地图-->
     <div class="Map leftMenu" >
         <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">人流分布</div>
@@ -89,11 +115,10 @@
 <!--右侧-->
 <div>
     <div class="title rightMenu">
-        <i class="fa fa-car pull-left" style="margin-left: 0.5rem"></i>
+        <i class="fa fa-car" style="text-align: center"></i>
         <span class="title-left" >今日累计车流：<span id="car" style="color: #fff">524</span></span>
-        <span class="title-left"  style="margin-left: 0.5rem">平均滞留时间：<span id="carTime" style="color: #fff">2小时30分</span></span>
+        <!--<span class="title-left"  style="margin-left: 0.5rem">平均滞留时间：<span id="carTime" style="color: #fff">2小时30分</span></span>-->
         <i class="fa fa-angle-double-left pull-right"></i>
-        <div style="width:  98%;height: 0.2vh;background: #2B2B2B;margin: 0.8vh 0.5vw 0 0;opacity: 0.5"></div>
         <div class="lt"></div>
         <div class="rt"></div>
         <div class="rb"></div>
@@ -102,40 +127,46 @@
     <!--1、天气-->
     <div class="weather rightMenu">
        <div class="today">
-           <span class="wen" id="wentoday">18℃-36℃</span>
-           <span class="weatherIcon" id="typeToday">阴转晴</span>
-           <span id="todayicon" class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem"></span>
-           <span class="wind">风向</span>
-           <span style="margin-left: 0.875rem" id="windToday">西南</span>
+           <div>
+               <span class="wen" id="wentoday">18℃-36℃</span>
+               <span class="weatherIcon" id="typeToday" style="vertical-align: top">阴转晴</span>
+               <span id="todayicon" class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem;vertical-align: top"></span>
+               <span class="wind">风向</span>
+               <span style="margin-left: 0.875rem" id="windToday">西南</span>
+           </div>
            <div style="width:  100%;height: 0.2vh;background: #3EAACC;margin: 2vh 0.5vw 0 0;opacity: 0.9"></div>
            <div class="tomorrow">
                <!--昨天-->
                <div class="col-md-3" style="float: left;padding: 0">
                    <div id="yesday">昨天</div>
                    <div id="yeswen" style="color: #fff">18℃-36℃</div>
-                   <div><span id="yestype" style="color: #fff">阴转晴</span>
-                       <span class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem;color: #ffffff" id="yesicon"></span>
+                   <div style="margin-top: 0.5rem"  >
+                       <span id="yestype" style="color: #fff;line-height: 3vh;vertical-align: top">阴转晴</span>
+                       <span class="icon-cloudy" style="margin-left: 0.5rem;margin-top: 1vh;font-size: 1.5rem;color: #ffffff;vertical-align: top" id="yesicon"></span>
                    </div>
                </div>
                <div class="col-md-3" style="float: left ;padding: 0;">
                    <div id="firstDay">明天</div>
                    <div id="firstWen" style="color: #fff">18℃-36℃</div>
-                   <div><span id="firstType" style="color: #fff">阴转晴</span>
-                        <span id="firstIcon" class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem"></span>
+                   <div style="margin-top: 0.5rem">
+                       <span id="firstType" style="color: #fff;line-height: 3vh;vertical-align: top">阴转晴</span>
+                       <span id="firstIcon" class="icon-cloudy" style="margin-left: 0.5rem;margin-top: 1vh;font-size: 1.5rem;color: #ffffff;vertical-align: top" ></span>
                    </div>
                </div>
                <div class="col-md-3" style="float: left;padding: 0;">
                    <div id="secondDay">明天</div>
                    <div id="secondWen" style="color: #fff">18℃-36℃</div>
-                   <div> <span id="secondType" style="color: #fff">阴转晴</span>
-                       <span id="secondIcon" class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem"></span>
+                   <div style="margin-top: 0.5rem">
+                       <span id="secondType" style="color: #fff;line-height: 3vh;vertical-align: top">阴转晴</span>
+                       <span  id="secondIcon" class="icon-cloudy" style="margin-left: 0.5rem;margin-top: 1vh;font-size: 1.5rem;color: #ffffff;vertical-align: top"></span>
                    </div>
                </div>
                <div class="col-md-3" style="float: left;padding: 0;">
                    <div id="thirdDay">明天</div>
                    <div id="thirdWen" style="color: #fff">18℃-36℃</div>
-                   <div><span id="thirdType" style="color: #fff">阴转晴</span>
-                       <span id="thirdIcon" class="icon-cloudy" style="margin-left: 0.5rem;font-size: 1.5rem"></span>
+                   <div style="margin-top: 0.5rem">
+                       <span id="thirdType" style="color: #fff;vertical-align: top">阴转晴</span>
+                       <span id="thirdIcon" class="icon-cloudy" style="margin-left: 0.5rem;margin-top: 1rem;font-size: 1.5rem;color: #ffffff;vertical-align: top"></span>
                    </div>
                </div>
            </div>
@@ -166,8 +197,16 @@
       <div class="lb"></div>
     </div>
 </div>
-
+<!--<div class="bottom">-->
+  <!--<span>123</span>-->
+<!--</div>-->
 </body>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=12DDKEKWABDKneKfibVKefTNcyHRosT8"></script>
+<script src="./node_modules/echarts/dist/echarts.js"></script>
+<script src="./node_modules/echarts/dist/extension/bmap.js"></script>
+<script src='./node_modules/echarts/map/js/china.js'></script>
 <script src="js/rightPie.js"></script>
 <script src="js/backgroundMap.js"></script>
 <script src="js/leftMenuBar.js"></script>
@@ -176,6 +215,7 @@
 <script src="js/rightDashboard.js"></script>
 <script src="js/Weather.js"></script>
 <script src="js/titleData.js"></script>
+<script src="js/ScrollBottom.js"></script>
 <script src="js/app.js"></script>
 
 </html>

@@ -1,8 +1,8 @@
 //头部
 displayTime();
 clock();
-const myBar = echarts.init(document.getElementById('bar'));
-bar(myBar);
+// const myBar = echarts.init(document.getElementById('bar'));
+// bar(myBar);
 //中国地图
 const myChartMap = echarts.init(document.getElementById('Map'));
 Bmap(myChartMap);
