@@ -37,6 +37,8 @@ var MyMar=setInterval(Marquee,speed);
 div1.onmouseover=function(){clearInterval(MyMar)};
 div1.onmouseout=function(){MyMar=setInterval(Marquee,speed); };
 setInterval(setdata,12000);
+setInterval(removeli,30000);
+
 //滚动函数
 function Marquee(){
     if(div1.scrollTop>=ul.offsetHeight){
@@ -52,5 +54,21 @@ function setdata() {
         var li = document.createElement('li');
         li.innerText = arr[j-1];
         ul.appendChild(li);
+    }
+}
+
+//移除多的li
+function removeli() {
+    // $('.bottomDiv ul').removeChild();
+    // console.log();
+    var item = document.getElementsByTagName("ul");
+    var listitem =item[1].getElementsByTagName("li");
+    // $('.bottomDiv ul').remove(listitem[0]);
+    if(listitem.length>3){
+        // listitem[0].remove();
+        // listitem[1].remove();
+        for (var i=0;i<listitem.length-2;i++){
+            listitem[i].remove();
+        }
     }
 }

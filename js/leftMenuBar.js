@@ -119,17 +119,13 @@ var json = [
     {"header": "客车车位：", "value": "300"},
     {"header": "货车车位：", "value": "200"},
 ];
-// var basic = $('basic');
-// var div = document.createElement('div');
-// let addHtml = '';
 for (var i = 0; i < json.length; i++) {
-
 
     if ((i+1) %2 ===1){
         var div = document.createElement('div');
         div.className = 'row';
         $('.basic').append(div);
-        console.log((i+1) %2);
+        // console.log((i+1) %2);
         var left = document.createElement('div');
         var leftspan = document.createElement('span');
         left.className = 'col-md-6'+' '+'col-lg-6';
