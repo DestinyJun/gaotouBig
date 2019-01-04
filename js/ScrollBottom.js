@@ -9,7 +9,8 @@ divoption = `<div class="bottom">
     <div class="rt all"></div>
     <div class="lb all"></div>
     <div class="rb all"></div>
-</div>`;
+</div>
+<div class="bottomtext" >版权所有：贵州高投服务管理有限公司 <span>123</span> 技术支持：贵阳红鸟智能技术服务有限公司</div>`;
 $('body').append(divoption);
 //图文信息模板
 var arr =new Array();
@@ -28,7 +29,7 @@ var ul = document.getElementById('ul');
 div.onmouseover=function(){clearInterval(MyMar)};
 div.onmouseout=function(){MyMar=setInterval(Marquee,speed); };
 setInterval(setdata,12000);
-
+setInterval(removeli,17000);
 //滚动函数
 function Marquee(){
     if(div.scrollTop>=ul.offsetHeight){
@@ -40,9 +41,18 @@ function Marquee(){
 }
 //设置列表
 function setdata() {
-    lioption=`<li>${arr[0]}</li>`;
+    lioption=``;
     for (var j=0;j<arr.length;j++){
         lioption+= `<li>${arr[j]}</li>`
     }
-    $('#ul').html(lioption);
+    $('#ul').append(lioption);
+}
+
+function removeli() {
+    var lis = $('#ul').children("li");
+    if(lis.length > 3) {
+        for (var i=0 ;i <lis.length-3;i++){
+            lis[i].remove();
+        }
+    }
 }

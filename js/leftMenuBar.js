@@ -122,8 +122,8 @@ var json = [
 var option = '';
 for (var i = 0; i < json.length; i=i+2) {
      option += `<div class="row">
-      <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.4vw">${json[i].header+json[i].value}</span></div>
-      <div class="col-md-6 col-lg-6 " style="padding: 0"><span class="pull-left">${json[i+1].header+json[i+1].value}</span></div>
+      <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.5vw">${json[i].header+json[i].value}</span></div>
+      <div class="col-md-6 col-lg-6 " style="padding: 0"><span class="pull-left" style="margin-left: 1vw">${json[i+1].header+json[i+1].value}</span></div>
      </div>`;
 
 }
