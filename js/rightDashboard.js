@@ -47,13 +47,12 @@ function  dashboard1(mychart,name) {
 
         ]
     };
-
+    mychart.setOption(option,true);
     setInterval(function () {
         option.series[0].endAngle = (Math.random() * 100).toFixed(2) - 0;
         option.series[0].data[0].value =((360-option.series[0].endAngle)/3.6).toFixed(2);
         mychart.setOption(option, true);
     },2000);
-    mychart.setOption(option,true);
 }
 function  dashboard2(mychart,name) {
     const option = {
@@ -104,13 +103,12 @@ function  dashboard2(mychart,name) {
 
         ]
     };
-
+    mychart.setOption(option,true);
     setInterval(function () {
         option.series[0].endAngle = (Math.random() * 100).toFixed(2) - 0;
         option.series[0].data[0].value = ((360-option.series[0].endAngle)/3.6).toFixed(2);
         mychart.setOption(option, true);
     },2000);
-    mychart.setOption(option,true);
 }
 function  dashboard3(mychart,name) {
    const option = {

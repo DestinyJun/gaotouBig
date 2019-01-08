@@ -119,34 +119,12 @@ var json = [
     {"header": "客车车位：", "value": "300"},
     {"header": "货车车位：", "value": "200"},
 ];
-// var basic = $('basic');
-// var div = document.createElement('div');
-// let addHtml = '';
-for (var i = 0; i < json.length; i++) {
+var option = '';
+for (var i = 0; i < json.length; i=i+2) {
+     option += `<div class="row">
+      <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.5vw">${json[i].header+json[i].value}</span></div>
+      <div class="col-md-6 col-lg-6 " style="padding: 0"><span class="pull-left" style="margin-left: 1vw">${json[i+1].header+json[i+1].value}</span></div>
+     </div>`;
 
-
-    if ((i+1) %2 ===1){
-        var div = document.createElement('div');
-        div.className = 'row';
-        $('.basic').append(div);
-        console.log((i+1) %2);
-        var left = document.createElement('div');
-        var leftspan = document.createElement('span');
-        left.className = 'col-md-6'+' '+'col-lg-6';
-        left.style.padding = '0';
-        leftspan.className='pull-left';
-        leftspan.style.marginLeft='1.4vw';
-        div.appendChild(left);
-        left.appendChild(leftspan);
-        leftspan.innerText = json[i].header+json[i].value;
-    } else {
-        var right = document.createElement('div');
-        var rightspan = document.createElement('span');
-        right.className = 'col-md-6'+' '+'col-lg-6';
-        left.style.padding = '0';
-        div.appendChild(right);
-        right.appendChild(rightspan);
-        rightspan.className='pull-left';
-        rightspan.innerText = json[i].header+json[i].value;
-    }
 }
+$('.basic').html(option);

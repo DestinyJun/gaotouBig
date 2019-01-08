@@ -19,10 +19,17 @@
     position: absolute;
 }
 
-.left h5 {
-    color: #31A0B4;
+.left h4 {
+    color: #15B2D8;
     line-height: 6vh;
-    margin-left: 5vw;
+    margin-left: 2vw;
+    font-family: "华文琥珀";
+}
+
+.left h5 {
+    color: #15B2D8;
+    line-height: 6vh;
+    margin-left: 25vw;
 }
 
 .right {
@@ -49,19 +56,19 @@ ul {
 /*header*/
 .home .right > ul > li {
     float: left;
-    margin-left: 2vw;
+    margin-left: 1vw;
 }
 
 .home .right > ul > li > span {
     margin-top: 0.5vh;
     height: 2vh;
     display: block;
-    font-size: 0.5rem;
+    font-size: 0.9rem;
     text-align: center;
 }
 
 .home .right > ul #time {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     line-height: 6vh;
 }
 
@@ -69,17 +76,27 @@ ul {
 .main {
     width: 100vw;
     height: 100vh;
+    position:fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-position: center 0;
 }
 
 .title {
-    padding: 1.8vh 0;
+    padding: 1vh 0;
     color: #3EAACC;
     font-size: 1rem;
     width: 24vw;
     text-align: center;
 }
 
-
+.middle {
+    position: absolute;
+    left: 25vw;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+}
 
 .title > .rt, .rb, .lt, .lb {
     width: 10px;
@@ -130,15 +147,20 @@ ul {
     top: 0;
     box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
     margin-top: 8vh;
-    background: rgba(50, 50, 50, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     margin-left: 1vw;
 }
-::-webkit-scrollbar {display:none}
+
+::-webkit-scrollbar {
+    display: none
+}
+
 .bar {
     width: 24vw;
     height: 24vh;
     margin-top: 17vh;
 }
+
 .basic {
     width: 24vw;
     height: 20vh;
@@ -148,6 +170,7 @@ ul {
     text-align: center;
     color: #3EAACC;
 }
+
 .bar > .rt, .rb, .lt, .lb {
     width: 10px;
     height: 10px;
@@ -262,76 +285,16 @@ ul {
     bottom: -2px;
 }
 
-/*.leftMenu .line {*/
-/*width: 24vw;*/
-/*height: 16vh;*/
-/*}*/
-/*右侧*/
 .rightMenu {
     position: absolute;
     right: 0;
     top: 0;
     box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
-    background: rgba(50, 50, 50, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     margin-top: 8vh;
     margin-right: 1vw;
 }
 
-/*.rightMenu:before{*/
-/*content: '';*/
-/*position: absolute;*/
-/*right: 0;*/
-/*top: 0;*/
-/*margin-top: 8vh;*/
-/*margin-right: 1vw;*/
-/*width:10%;*/
-/*height:2px;*/
-/*background-color:#467C7B*/
-/*}*/
-/*.title {*/
-/*padding: 2vh 0;*/
-/*color: #3EAACC;*/
-/*font-size: 0.8rem;*/
-/*}*/
-/*.title .title-left {*/
-/*font-size: 0.8rem;*/
-
-/*}*/
-/*.title i{*/
-/*margin: 0.5vh 1vw 0.8vh 0;*/
-/*}*/
-/*.title>.rt ,.rb, .lt, .lb {*/
-/*width: 15px;*/
-/*height: 15px;*/
-/*position: absolute;*/
-/*}*/
-/*.title .lt{*/
-/*border-top: 1.5px solid rgba(0,211,231,0.5);*/
-/*border-left: 1.5px solid rgba(0,211,231,0.5);*/
-/*left: -2px;*/
-/*top: -2px;*/
-/*}*/
-/*.title .rt{*/
-/*border-top: 1.5px solid rgba(0,211,231,0.5);*/
-/*border-right: 1.5px solid rgba(0,211,231,0.5);*/
-/*right: -2px;*/
-/*top: -2px;*/
-/*}*/
-/*.title .rb{*/
-/*border-bottom:1.5px solid rgba(0,211,231,0.5);*/
-/*border-right: 1.5px solid rgba(0,211,231,0.5);*/
-/*right: -2px;*/
-/*bottom: -2px;*/
-/*}*/
-/*.title .lb{*/
-/*border-bottom:1.5px solid rgba(0,211,231,0.5);*/
-/*border-left: 1.5px solid rgba(0,211,231,0.5);*/
-/*left: -2px;*/
-/*bottom: -2px;*/
-/*}*/
-/*.title .title-left {*/
-/*font-size: 0.8rem;*/
-/*}*/
 .weather {
     width: 24vw;
     height: 24vh;
@@ -479,11 +442,11 @@ ul {
 .bottom {
     position: absolute;
     right: 30vw;
-    bottom: 4vh;
+    top: 8vh;
     width: 40vw;
     height: 12vh;
-    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
-    background: rgba(50, 50, 50, 0.5);
+    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.9) inset;
+    background: rgba(50, 50, 50, 0.8);
 }
 
 .bottomDiv {
@@ -530,10 +493,27 @@ ul {
     left: -2px;
     bottom: -2px;
 }
+
 li {
     line-height: 1.5rem;
     text-indent: 2rem;
     font-style: normal;
+}
+
+.bottomtext {
+    position: absolute;
+    width: 30vw;
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 2vh;
+    bottom: 2vh;
+    left: 35vw;
+    color: white;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.bottomtext span {
+    color: rgba(0, 0, 0, 0);
 }
 
 /*.rightMenu .video{*/

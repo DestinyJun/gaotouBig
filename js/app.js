@@ -26,8 +26,8 @@ dashboard3(myChartdashboard3,'货车车位');
 
 
 //背景地图
-const myChart = echarts.init(document.getElementById('main'));
-map(myChart);
+// const myChart = echarts.init(document.getElementById('main'));
+// map(myChart);
 
 
 
