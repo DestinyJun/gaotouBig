@@ -1,229 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>高投服务区大数据</title>
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="./css/icomoon/style.css">
-
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/select.css">
 </head>
 <body>
-<!--背景-->
-<div id="main" class="main" style="background-image: url(lib/image/background1.png);">
-</div>
-<!--头部-->
-<!--<div id="middle" class="middle" ></div>-->
-<div class="home left">
-    <!--左侧标题-->
-    <div class="row">
-        <h4>贵州高投服务管理有限公司</h4>
-        <h5>久长服务区大数据</h5>
-    </div>
-    <!--右侧时间显示-->
-    <div class="right">
-        <ul>
-            <li>
-                <span>当前</span>
-                <span>时间</span>
-            </li>
-            <li id="time">
-            </li>
-            <li>
-                <span id="nowWeek"></span>
-                <span id="date"></span>
-            </li>
-        </ul>
-    </div>
-</div>
-<!--左侧-->
-<!--<div class="leftMenu menu">-->
-<!--//左侧头部人流量统计-->
-<div>
-    <div class="title leftMenu">
-        <i class="fa fa-user" style="text-align: center"></i>
-        <span class="title-left">今日累计客流：<span id="user" style="color: #fff;font-size: 1.8rem">132</span></span>
-        <!--<span class="title-left"  style="margin-left: 0.8rem">平均滞留时间：<span id="userTime" style="color: #fff">2小时30分</span></span>-->
-        <i class="fa fa-angle-double-left pull-right"></i>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
-    </div>
-    <!--1、资本信息-->
-    <div class="bar leftMenu">
-        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">基本信息</div>
-        <div class="basic" id="basic">
-            <!--<div class="row">-->
-            <!--<div class="col-md-6">-->
-            <!--<span>经度：<span>160.705393</span></span>-->
-            <!--</div>-->
-            <!--<div class="col-md-6">-->
-            <!--<span>维度：<span>160.705393</span></span>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!-- <div style="width: 24vw;">
-                 <span class="pull-left" style="margin-left: 0.5rem">占地面积：<span>160.705393</span></span>
-                 <span class="pull-left" style="margin-left: 2rem">始建时间：<span>2013-10-13</span></span>
-             </div>
-             <div style="width: 24vw;">
-                 <span class="pull-left" style="margin-left: 0.5rem">区长电话：<span>18311563380</span></span>
-                 <span class="pull-left" style="margin-left: 1rem">运营时间：<span>2018-07-18</span></span>
-             </div>
-             <div style="width: 24vw;">
-                 <span class="pull-left" style="margin-left: 0.5rem">供电账户：<span>久长服务区</span></span>
-                 <span class="pull-left" style="margin-left: 2rem">用水量：<span>5448</span></span>
-             </div>
-             <div style="width: 24vw;">
-                 <span class="pull-left" style="margin-left: 0.5rem">保洁人员：<span>15</span></span>
-                 <span class="pull-left" style="margin-left: 6rem">安保人员：<span>20</span></span>
-             </div>
-             <div style="width: 24vw;">
-                 <span class="pull-left" style="margin-left: 0.5rem">大车车位：<span>200</span></span>
-                 <span class="pull-left" style="margin-left: 5.2rem">小车车位：<span>300</span></span>
-             </div>
-             <div style="width: 24vw;">
-                 <span class="pull-left" style="margin-left: 0.5rem">客车车位：<span>300</span></span>
-                 <span class="pull-left" style="margin-left: 5.2rem">货车车位：<span>200</span></span>
-             </div>-->
+<div class="main" style="background-image: url(lib/image/3.jpg);">
+    <div class="select">
+        <!--省-->
+        <div>
+            <select id="select" class="province" onchange="cityChange(event)">
+                <option>请选择省：</option>
+            </select>
         </div>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
-    </div>
-    <!--2、地图-->
-    <div class="Map leftMenu">
-        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">人流分布</div>
-        <div style="width: 24vw;height:28vh" id="Map"></div>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
-    </div>
-    <!--3、仪表盘-->
-    <div class="graph leftMenu">
-        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">厕所使用率</div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="graph1"></div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 4vw" id="graph2"></div>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
-    </div>
-    <!--<div class="line" id="line"></div>-->
-</div>
-<!--右侧-->
-<div>
-    <div class="title rightMenu">
-        <i class="fa fa-car" style="text-align: center"></i>
-        <span class="title-left">今日累计车流：<span id="car" style="color: #fff;font-size: 1.8rem">524</span></span>
-        <!--<span class="title-left"  style="margin-left: 0.5rem">平均滞留时间：<span id="carTime" style="color: #fff">2小时30分</span></span>-->
-        <i class="fa fa-angle-double-left pull-right"></i>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
-    </div>
-    <!--1、天气-->
-    <div class="weather rightMenu">
-        <div class="today">
-            <div>
-                <span class="wen" id="wentoday" style="vertical-align: top">18℃-36℃</span>
-                <span class="weatherIcon" id="typeToday" style="vertical-align: top">阴转晴</span>
-                <span id="todayicon" class="icon-cloudy-sky"
-                      style="margin-left: 0.5rem;font-size: 1.5rem;vertical-align: top"></span>
-                <span class="wind" style="vertical-align: top">风向</span>
-                <span style="margin-left: 0.875rem;vertical-align: top" id="windToday">西南</span>
-            </div>
-            <div style="width:  100%;height: 0.2vh;background: #3EAACC;margin: 2vh 0.5vw 0 0;opacity: 0.9"></div>
-            <div class="tomorrow">
-                <!--昨天-->
-                <div class="col-md-3" style="float: left;padding: 0">
-                    <div id="yesday">昨天</div>
-                    <div id="yeswen" style="color: #fff">18℃-36℃</div>
-                    <div style="margin-top: 0.5rem">
-                        <span id="yestype" style="color: #fff;line-height: 3vh;vertical-align: top">阴转晴</span>
-                        <span class="icon-cloudy"
-                              style="margin-left: 0.5rem;margin-top: 1vh;font-size: 1.5rem;color: #ffffff;vertical-align: top"
-                              id="yesicon"></span>
-                    </div>
-                </div>
-                <div class="col-md-3" style="float: left ;padding: 0;">
-                    <div id="firstDay">明天</div>
-                    <div id="firstWen" style="color: #fff">18℃-36℃</div>
-                    <div style="margin-top: 0.5rem">
-                        <span id="firstType" style="color: #fff;line-height: 3vh;vertical-align: top">阴转晴</span>
-                        <span id="firstIcon" class="icon-cloudy"
-                              style="margin-left: 0.5rem;margin-top: 1vh;font-size: 1.5rem;color: #ffffff;vertical-align: top"></span>
-                    </div>
-                </div>
-                <div class="col-md-3" style="float: left;padding: 0;">
-                    <div id="secondDay">明天</div>
-                    <div id="secondWen" style="color: #fff">18℃-36℃</div>
-                    <div style="margin-top: 0.5rem">
-                        <span id="secondType" style="color: #fff;line-height: 3vh;vertical-align: top">阴转晴</span>
-                        <span id="secondIcon" class="icon-cloudy"
-                              style="margin-left: 0.5rem;margin-top: 1vh;font-size: 1.5rem;color: #ffffff;vertical-align: top"></span>
-                    </div>
-                </div>
-                <div class="col-md-3" style="float: left;padding: 0;">
-                    <div id="thirdDay">明天</div>
-                    <div id="thirdWen" style="color: #fff">18℃-36℃</div>
-                    <div style="margin-top: 0.5rem">
-                        <span id="thirdType" style="color: #fff;vertical-align: top">阴转晴</span>
-                        <span id="thirdIcon" class="icon-cloudy"
-                              style="margin-left: 0.5rem;margin-top: 1rem;font-size: 1.5rem;color: #ffffff;vertical-align: top"></span>
-                    </div>
-                </div>
-            </div>
+        <!--市-->
+        <div>
+            <select class="city" id="city" onchange="areaChange(event)">
+                <option>请选择市：</option>
+            </select>
         </div>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
-    </div>
-    <!--2、车流饼状图-->
-    <div class="pie rightMenu">
-        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">车流类型分布</div>
-        <div style="width: 24vw;height: 30vh" id="pie"></div>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
-    </div>
-    <!--3、仪表盘-->
-    <div class="dashboard rightMenu">
-        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">车位使用率</div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="dashboard1"></div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="dashboard2"></div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="dashboard3"></div>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
+        <!--区-->
+        <div>
+            <select class="area" id="area" onchange="routing(event)">
+                <option>
+                    请选择服务区：
+                </option>
+            </select>
+        </div>
     </div>
 </div>
-<!--<div class="bottom">-->
-<!--<span>123</span>-->
-<!--</div>-->
-</body>
 <script src="./node_modules/jquery/dist/jquery.js"></script>
-<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=12DDKEKWABDKneKfibVKefTNcyHRosT8"></script>
-<script src="./node_modules/echarts/dist/echarts.js"></script>
-<script src="./node_modules/echarts/dist/extension/bmap.js"></script>
-<script src="js/rightPie.js"></script>
-<script src="js/backgroundMap.js"></script>
-<script src="js/leftMenuBar.js"></script>
-<script src="js/leftMenuMap.js"></script>
-<script src="js/rightDashboard.js"></script>
-<script src="js/Weather.js"></script>
-<script src="js/titleData.js"></script>
-<script src="js/ScrollBottom.js"></script>
-<script src="js/app.js"></script>
+<script src="js/md5.js" type="text/javascript"></script>
+<script src="js/json.js" type="text/javascript"></script>
+<script src="js/select.js"></script>
+</body>
 </html>

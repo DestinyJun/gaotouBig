@@ -1,3 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-position: center 0;
+}
+.select {
+    position: absolute;
+    left: 40%;
+    top:50vh;
+    margin: 0 -16vw;
+    width: 55vw;
+    text-align: center;
+    text-align-last: center;
+}
+.select>div {
+    text-align: center;
+    display: inline-block;
+    /*border: 1px solid white;*/
+    /*background: #000;*/
+    width: 18vw;
+    height: 5vh;
+}
+select {
+    width: 100%;
+    /*border: 1px solid red;*/
+    background: rgba(0,0,0,0.5);
+    color: white;
+    height: 5vh;
+    text-align: center;
+    /*text-align-last: center;*/
+}
+select option {
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+
+
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar{
     width: 12px;
@@ -15,30 +60,4 @@
 }
 ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(255,255,255,0.8);
-}
-select {
-    width: 100%;
-    /*border: 1px solid red;*/
-    background: rgba(0,0,0,0.5);
-    color: white;
-    /*text-align-last: center;*/
-}
-select option {
-    background: #224F6D;
-}
-.select {
-    position: absolute;
-    left: 50%;
-    margin: 0 -16vw;
-
-}
-.select>div {
-    text-align: center;
-    display: inline-block;
-    /*border: 1px solid white;*/
-    /*background: #000;*/
-    width: 10vw;
-}
-body {
-    background: #449fdb;
 }

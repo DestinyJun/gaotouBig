@@ -1,15 +1,15 @@
+
 //左边客流量
-setInterval(function () {
-    const data =  (Math.random() * 1000).toFixed(0) - 0;
+function peopelData(data){
+    // const data =  (Math.random() * 1000).toFixed(0) - 0;
     var text = document.getElementById('user');
     text.innerText =data;
-},2000);
+}
 //右边车流量
-setInterval(function () {
-    const data =  (Math.random() * 1000).toFixed(0) - 0;
+function carData(data){
     var car = document.getElementById('car');
     car.innerText =data;
-},2000);
+}
 
 var time = document.getElementById("time");
 var date = document.getElementById("date");

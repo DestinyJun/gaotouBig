@@ -27,9 +27,12 @@
 }
 
 .left h5 {
+    position: absolute;
     color: #15B2D8;
     line-height: 6vh;
-    margin-left: 25vw;
+    /*margin-left: 25vw;*/
+    left: 48%;
+    /*top: 50%;*/
 }
 
 .right {
