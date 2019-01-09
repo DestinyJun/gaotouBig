@@ -10,6 +10,7 @@ divoption = `<div class="bottom">
     <div class="lb all"></div>
     <div class="rb all"></div>
 </div>
+<!--设置底部的版权信息-->
 <div class="bottomtext" >版权所有：贵州高投服务管理有限公司 <span>123</span> 技术支持：贵阳红鸟智能技术服务有限公司</div>`;
 $('body').append(divoption);
 //图文信息模板
@@ -48,6 +49,7 @@ function setdata() {
     $('#ul').append(lioption);
 }
 
+// 移除列表
 function removeli() {
     var lis = $('#ul').children("li");
     if(lis.length > 3) {

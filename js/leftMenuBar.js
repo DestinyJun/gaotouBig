@@ -106,26 +106,11 @@ function dataIfo(json) {
     var option = '';
     for (var i = 0; i < json.length; i=i+2) {
         option += `<div class="row">
-      <div class="col-sm-6 col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw;padding: 0">${json[i].header+json[i].value}</span></div>
-      <div class="col-sm-6 col-md-6 col-lg-6 " style="padding: 0"><span class="pull-left" >${json[i+1].header+json[i+1].value}</span></div>
+      <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${json[i].header+json[i].value}</span></div>
+      <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1vw;padding: 0">${json[i+1].header+json[i+1].value}</span></div>
      </div>`;
 
     }
     $('.basic').html(option);
 }
-// var json = [
-//     {"header": "经度：", "value": "160.705390"},
-//     {"header": "维度：", "value": "160.705390"},
-//     {"header": "占地面积：", "value": "90"},
-//     {"header": "始建时间：", "value": "2013-10-13"},
-//     {"header": "区长电话：", "value": "18311563380"},
-//     {"header": "运营时间：", "value": "2018-07-18"},
-//     {"header": "供电账户：", "value": "久长服务区"},
-//     {"header": "用水量：", "value": "5448"},
-//     {"header": "保洁人员：", "value": "15"},
-//     {"header": "安保人员：", "value": "20"},
-//     {"header": "大车车位：", "value": "200"},
-//     {"header": "小车车位：", "value": "300"},
-//     {"header": "客车车位：", "value": "300"},
-//     {"header": "货车车位：", "value": "200"},
-// ];
+
