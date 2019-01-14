@@ -1,4 +1,5 @@
-var http = 'http://123.249.28.108:8889/highway-sabd';
+// var http = 'http://123.249.28.108:8889/highway-sabd';
+var http = 'http://120.77.171.73:8080/highway-sabd';
 var provinceOption = '';
 var cityOption = '';
 var areaOption = '';

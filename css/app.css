@@ -86,7 +86,7 @@ ul {
 }
 
 .title {
-    padding: 1vh 0;
+    padding: 0.5vh 0;
     color: #3EAACC;
     font-size: 1rem;
     width: 24vw;
@@ -137,7 +137,7 @@ ul {
 }
 
 .title .title-left {
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .title i {
@@ -254,7 +254,33 @@ ul {
     height: 21vh;
     margin-top: 77vh;
 }
-
+.graph .toiletTitle{
+    color: #3EAACC;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 0.2rem
+}
+.graph .Toilet{
+    color: #3EAACC;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 0.2rem
+}
+.graph .toilet{
+    width: 80%;
+    height: 3vh;
+    /*text-align: center;*/
+    background: #3EAACC;
+    color: #fff;
+    margin-left: 1vw;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.graph .toilet span{
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 3vh;
+}
 .graph > .rt, .rb, .lt, .lb {
     width: 10px;
     height: 10px;
@@ -407,7 +433,33 @@ ul {
     height: 21vh;
     margin-top: 77vh;
 }
-
+.dashboard  .carportTitle{
+    color: #3EAACC;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 0.2rem
+}
+.dashboard .carport {
+    color: #3EAACC;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 0.2rem
+}
+.dashboard .carport .carportBig{
+    width: 80%;
+    height: 3vh;
+    /*text-align: center;*/
+    background: #3EAACC;
+    color: #fff;
+    margin-left: 1vw;
+    margin-top: 0.7rem;
+    border-radius: 5px;
+}
+.dashboard .carport span{
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 3vh;
+}
 .dashboard > .rt, .rb, .lt, .lb {
     width: 10px;
     height: 10px;

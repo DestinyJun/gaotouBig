@@ -1,4 +1,5 @@
-var url = 'http://123.249.28.108:8889/highway-sabd';
+// var url = 'http://123.249.28.108:8889/highway-sabd';
+var url = 'http://120.77.171.73:8080/highway-sabd';
 //头部
 
 //获取传过来的值
@@ -19,7 +20,7 @@ var json = getJson();
 //左边
 //1、实时请求客流
 getPeopleNum();
-setInterval(getPeopleNum, 50000);
+setInterval(getPeopleNum, 4000);
 
 //2、 基本信息
 getPeopleInfo();
@@ -34,7 +35,7 @@ getToiletData();
 //右边
 // 1、请求客流
 getCarNum();
-setInterval(getCarNum, 50000);
+setInterval(getCarNum, 4000);
 
 //2、 车辆类型分布饼状图
 getCarPie();
@@ -66,14 +67,35 @@ function getPeopleInfo() {
         data: json,
         contentType: "application/json",
         success: function (result) {
+            console.log(result);
             var dataInfo = [];
+            var upInfo = [];
+            var downInfo = [];
+            var downtitle ;
+            var uptitle ;
+            console.log(result.data.downAttributeValues);
+            downtitle = result.data.downAttributeValues.source+'-->'+result.data.downAttributeValues.destination;
+            uptitle = result.data.upAttributeValues.source+'-->'+result.data.upAttributeValues.destination;
             for (var i = 0; i < result.data.commonAttributeValues.length; i++) {
                 dataInfo.push({
-                    'header': result.data.commonAttributeValues[i].attributeDesc + '：',
+                    'head': result.data.commonAttributeValues[i].attributeDesc + '：',
                     'value': result.data.commonAttributeValues[i].value
                 })
             }
-            dataIfo(dataInfo);
+            for (var i = 0; i < result.data.downAttributeValues.attributeValues.length; i++) {
+                downInfo.push({
+                    'head': result.data.commonAttributeValues[i].attributeDesc + '：',
+                    'value': result.data.commonAttributeValues[i].value
+                })
+            }
+            for (var i = 0; i < result.data.upAttributeValues.attributeValues.length; i++) {
+                upInfo.push({
+                    'head': result.data.commonAttributeValues[i].attributeDesc + '：',
+                    'value': result.data.commonAttributeValues[i].value
+                })
+            }
+            console.log(uptitle);
+            dataIfo(dataInfo,downInfo,upInfo,downtitle,uptitle);
         }
     });
 }
@@ -96,10 +118,18 @@ function getPeopleMap() {
 
 // 左边厕所使用率
 function getToiletData() {
-    const myChartgraph1 = echarts.init(document.getElementById('graph1'));
-    dashboard2(myChartgraph1, '男厕所');
-    const myChartgraph2 = echarts.init(document.getElementById('graph2'));
-    dashboard3(myChartgraph2, '女厕所');
+    setInterval(function () {
+        var cartitleleft = '遵义->贵阳';
+        var cartitle = '贵阳->遵义';
+        leftToilet(cartitleleft,(Math.random() * 30).toFixed(0),(Math.random() * 30).toFixed(0),(Math.random() * 30).toFixed(0));
+        rightToilet(cartitle,(Math.random() * 30).toFixed(0),(Math.random() * 30).toFixed(0),(Math.random() * 30).toFixed(0))
+
+
+    },1000)
+    // const myChartgraph1 = echarts.init(document.getElementById('graph1'));
+    // f(myChartgraph1);
+    // const myChartgraph2 = echarts.init(document.getElementById('graph2'));
+    // dashboard3(myChartgraph2, '女厕所');
 
 }
 
@@ -132,7 +162,7 @@ function getCarPie() {
             for (let i = 0; i < result.data.length; i++) {
                 datapie.push({'name': result.data[i].name, 'value': result.data[i].value})
             }
-            console.log(datapie);
+            // console.log(datapie);
             const myChartpie = echarts.init(document.getElementById('pie'));
             pie(myChartpie, datapie);
             // for (var j = 0; j < result.data.length ; j++) {
@@ -143,12 +173,19 @@ function getCarPie() {
 }
 
 function getCarportData() {
-    const myChartdashboard1 = echarts.init(document.getElementById('dashboard1'));
-    dashboard1(myChartdashboard1, '小车车位');
-    const myChartdashboard2 = echarts.init(document.getElementById('dashboard2'));
-    dashboard2(myChartdashboard2, '客车车位');
-    const myChartdashboard3 = echarts.init(document.getElementById('dashboard3'));
-    dashboard3(myChartdashboard3, '货车车位');
+    setInterval(function () {
+        var cartitleleft = '遵义->贵阳';
+        var cartitle = '贵阳->遵义';
+        leftCar(cartitleleft,(Math.random() * 100).toFixed(0),(Math.random() * 100).toFixed(0),(Math.random() * 100).toFixed(0));
+        rightCar(cartitle,(Math.random() * 100).toFixed(0),(Math.random() * 100).toFixed(0),(Math.random() * 100).toFixed(0))
+
+    },1000);
+    // const myChartdashboard1 = echarts.init(document.getElementById('dashboard1'));
+    // dashboard1(myChartdashboard1, '小车车位');
+    // const myChartdashboard2 = echarts.init(document.getElementById('dashboard2'));
+    // dashboard2(myChartdashboard2, '客车车位');
+    // const myChartdashboard3 = echarts.init(document.getElementById('dashboard3'));
+    // dashboard3(myChartdashboard3, '货车车位');
 }
 
 

@@ -44,8 +44,8 @@
 <!--//左侧头部人流量统计-->
 <div>
     <div class="title leftMenu">
-        <i class="fa fa-user" style="text-align: center"></i>
-        <span class="title-left">今日累计客流：<span id="user" style="color: #fff;font-size: 1.8rem">132</span></span>
+        <i class="fa fa-user" style="text-align: center; font-size: 1.4rem"></i>
+        <span class="title-left">今日累计客流：<span id="user" style="color: #fff;font-size: 2rem">132</span></span>
         <!--<span class="title-left"  style="margin-left: 0.8rem">平均滞留时间：<span id="userTime" style="color: #fff">2小时30分</span></span>-->
         <i class="fa fa-angle-double-left pull-right"></i>
         <div class="lt"></div>
@@ -106,9 +106,17 @@
     </div>
     <!--3、仪表盘-->
     <div class="graph leftMenu">
-        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">厕所使用率</div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="graph1"></div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 4vw" id="graph2"></div>
+        <div class="toiletTitle">厕所使用情况</div>
+        <div class="pull-left col-lg-6 col-md-6 Toilet">
+            <div id="letfTitile">贵阳->遵义</div>
+            <div class="toilet"><span>男厕剩余空位：</span><span id="leftManTiolet">00</span></div>
+            <div class="toilet"><span>女厕剩余空位：</span><span id="leftWomenTiolet">00</span></div>
+        </div>
+        <div class="pull-right col-lg-6 col-md-6 Toilet">
+            <div id="rightTitile">遵义->贵阳</div>
+            <div class="toilet"><span>男厕剩余空位：</span><span id="rightManTiolet">00</span></div>
+            <div class="toilet"><span>女厕剩余空位：</span><span id="rightWomenTiolet">00</span></div>
+        </div>
         <div class="lt"></div>
         <div class="rt"></div>
         <div class="rb"></div>
@@ -119,8 +127,8 @@
 <!--右侧-->
 <div>
     <div class="title rightMenu">
-        <i class="fa fa-car" style="text-align: center"></i>
-        <span class="title-left">今日累计车流：<span id="car" style="color: #fff;font-size: 1.8rem">524</span></span>
+        <i class="fa fa-car" style="text-align: center; font-size: 1.4rem"></i>
+        <span class="title-left">今日累计车流：<span id="car" style="color: #fff;font-size: 2rem">524</span></span>
         <!--<span class="title-left"  style="margin-left: 0.5rem">平均滞留时间：<span id="carTime" style="color: #fff">2小时30分</span></span>-->
         <i class="fa fa-angle-double-left pull-right"></i>
         <div class="lt"></div>
@@ -197,10 +205,19 @@
     </div>
     <!--3、仪表盘-->
     <div class="dashboard rightMenu">
-        <div style="color: #3EAACC;font-size: 0.875rem;text-align: center;margin-top: 0.2rem">车位使用率</div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="dashboard1"></div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="dashboard2"></div>
-        <div style="width:7vw;height: 17vh;float: left;margin-left: 1vw" id="dashboard3"></div>
+        <div class="carportTitle">车位使用情况</div>
+        <div class="pull-left col-lg-6 col-md-6 carport">
+            <div id="leftcartitle">遵义->贵阳</div>
+            <div class="carportBig"><span>大车剩余车位：</span><span id="leftBigCarport">00</span></div>
+            <div class="carportBig"><span>小车剩余车位：</span><span id="leftSmollCarport">00</span></div>
+            <div class="carportBig"><span>客车剩余车位：</span><span id="leftTruckCarport">00</span></div>
+        </div>
+        <div class="pull-right col-lg-6 col-md-6 carport">
+            <div id="rightcartitle">贵阳->遵义</div>
+            <div class="carportBig"><span>大车剩余车位：</span><span id="rightBigCarport">00</span></div>
+            <div class="carportBig"><span>小车剩余车位：</span><span id="rightSmollCarport">00</span></div>
+            <div class="carportBig"><span>客车剩余车位：</span><span id="rightTruckCarport">00</span></div>
+        </div>
         <div class="lt"></div>
         <div class="rt"></div>
         <div class="rb"></div>
@@ -225,5 +242,4 @@
 <script src="js/titleData.js"></script>
 <script src="js/ScrollBottom.js"></script>
 <script src="js/app.js"></script>
-<!--<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>-->
 </html>
