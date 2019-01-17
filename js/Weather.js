@@ -86,6 +86,7 @@ function icon(type,id) {
             case '雷阵雨':  id.className = 'icon-thundershower';break;
             case '阴':  id.className = 'icon-cloudy-sky';break;
             case '冻雨':  id.className = 'icon-heavy-rain';break;
+            case '阵雨':  id.className = 'icon-thundershower';break;
             default:
                 break;
         }
