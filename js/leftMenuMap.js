@@ -25,6 +25,7 @@ function Bmap(myChart,data) {
             var res = [];
             for (var i = 0; i < data.length; i++) {
                 var geoCoord = geoCoordMap[data[i].name];
+                 // var geoCoord = data[i].value;
                 if (geoCoord) {
                     res.push({
                         name: data[i].name,
@@ -32,8 +33,10 @@ function Bmap(myChart,data) {
                     });
                 }
             }
+            // console.log(res);
             return res;
         };
+
         option = {
             title: {
                 textStyle: {
@@ -128,8 +131,8 @@ function Bmap(myChart,data) {
                     normal: {
                         color: '#FFF'
                     }
-                }
-            },
+                  }
+                },
                 {
                     type: 'map',
                     map: 'zhongguo',
@@ -168,6 +171,13 @@ function Bmap(myChart,data) {
                     symbolSize: 30,
                     label: {
                         normal: {
+                            formatter:function(params) {
+                                if (typeof(params.value)[2] === 'undefined') {
+                                    return  params.value;
+                                } else {
+                                    return   params.value[2];
+                                }
+                            },
                             show: true,
                             textStyle: {
                                 color: '#fff',
