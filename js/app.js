@@ -168,7 +168,7 @@ function getCarPie() {
             for (let i = 0; i < result.data.length; i++) {
                 datapie.push({'name': result.data[i].name, 'value': result.data[i].value})
             }
-            // console.log(datapie);
+            console.log(datapie);
             const myChartpie = echarts.init(document.getElementById('pie'));
             pie(myChartpie, datapie);
             // for (var j = 0; j < result.data.length ; j++) {
