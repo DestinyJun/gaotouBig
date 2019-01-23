@@ -33,7 +33,6 @@ function Bmap(myChart,data) {
                     });
                 }
             }
-            // console.log(res);
             return res;
         };
 

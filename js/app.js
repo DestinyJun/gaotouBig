@@ -77,24 +77,30 @@ function getPeopleInfo() {
             downtitle = result.data.downAttributeValues.source+'-->'+result.data.downAttributeValues.destination;
             uptitle = result.data.upAttributeValues.source+'-->'+result.data.upAttributeValues.destination;
             for (var i = 0; i < result.data.commonAttributeValues.length; i++) {
-                dataInfo.push({
-                    'head': result.data.commonAttributeValues[i].attributeDesc + '：',
-                    'value': result.data.commonAttributeValues[i].value
-                })
+                if(result.data.commonAttributeValues[i].show){
+                    dataInfo.push({
+                        'head': result.data.commonAttributeValues[i].attributeDesc + '：',
+                        'value': result.data.commonAttributeValues[i].value
+                    })
+                }
             }
             for (var i = 0; i < result.data.downAttributeValues.attributeValues.length; i++) {
-                downInfo.push({
-                    'head': result.data.commonAttributeValues[i].attributeDesc + '：',
-                    'value': result.data.commonAttributeValues[i].value
-                })
+                if (result.data.downAttributeValues.attributeValues[i].show){
+                    downInfo.push({
+                        'head': result.data.downAttributeValues.attributeValues[i].attributeDesc + '：',
+                        'value': result.data.downAttributeValues.attributeValues[i].value
+                    })
+                }
             }
             for (var i = 0; i < result.data.upAttributeValues.attributeValues.length; i++) {
-                upInfo.push({
-                    'head': result.data.commonAttributeValues[i].attributeDesc + '：',
-                    'value': result.data.commonAttributeValues[i].value
-                })
+                if (result.data.upAttributeValues.attributeValues[i].show){
+                    upInfo.push({
+                        'head': result.data.upAttributeValues.attributeValues[i].attributeDesc + '：',
+                        'value': result.data.upAttributeValues.attributeValues[i].value
+                    })
+                }
             }
-            console.log(uptitle);
+            console.log(upInfo);
             dataIfo(dataInfo,downInfo,upInfo,downtitle,uptitle);
         }
     });

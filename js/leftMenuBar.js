@@ -154,18 +154,18 @@ function dataIfo(json,down,up,downtitle,uptitle) {
         } else if (up.length%2 === 1){
             var optionup1 = '';
             for (var i = 0; i < up.length-1; i=i+2) {
-                optionup1 += `<div class="row">
+            optionup1 += `<div class="row">
             <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${up[i].head+up[i].value}</span></div>
             <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1vw;padding: 0">${up[i+1].head+up[i+1].value}</span></div>
             </div>`;
-                $('.basic').append(optionup1);
-                var optionup2= `<div class="row">
+            }
+            $('.basic').append(optionup1);
+            var optionup2= `<div class="row">
             <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${up[up.length-1].head+up[up.length-1].value}</span></div>
             </div>`;
-                $('.basic').append(optionup2);
-            }
+            $('.basic').append(optionup2);
             var optiondowntitle = `<div class="row"><span style="margin-left: 10vw ;color: #ffffff">${downtitle}</span>
-<div style="width: 25vw;height: 1px;background: white"></div><div>`;
+            <div style="width: 25vw;height: 1px;background: white"></div><div>`;
             $('.basic').append(optiondowntitle);
             if (down.length%2 === 0) {
                 var optiondown = '';
@@ -174,8 +174,8 @@ function dataIfo(json,down,up,downtitle,uptitle) {
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${down[i].head+down[i].value}</span></div>
                <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1vw;padding: 0">${down[i+1].head+down[i+1].value}</span></div>
                </div>`;
-                    $('.basic').append(optiondown);
                 }
+                $('.basic').append(optiondown);
             }else if (down.length%2 === 1){
                 var optiondown = '';
                 for (var i = 0; i < down.length-1; i=i+2) {
@@ -183,8 +183,8 @@ function dataIfo(json,down,up,downtitle,uptitle) {
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${down[i].head+down[i].value}</span></div>
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1vw;padding: 0">${down[i+1].head+down[i+1].value}</span></div>
                 </div>`;
-                    $('.basic').append(optiondown);
                 }
+                $('.basic').append(optiondown);
                 var optiondown1 = `<div class="row">
                     <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${down[down.length-1].head+down[down.length-1].value}</span></div>
                 </div>`;
@@ -195,9 +195,9 @@ function dataIfo(json,down,up,downtitle,uptitle) {
         var option = '';
         for (var i = 0; i < json.length-1; i=i+2) {
             option += `<div class="row">
-       <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${json[i].head+json[i].value}</span></div>
-       <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1vw;padding: 0">${json[i+1].head+json[i+1].value}</span></div>
-       </div>`;
+          <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${json[i].head+json[i].value}</span></div>
+          <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1vw;padding: 0">${json[i+1].head+json[i+1].value}</span></div>
+          </div>`;
         }
         $('.basic').html(option);
        var  option1 = `<div class="row">
@@ -214,11 +214,11 @@ function dataIfo(json,down,up,downtitle,uptitle) {
             <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${up[i].head+up[i].value}</span></div>
             <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1vw;padding: 0">${up[i+1].head+up[i+1].value}</span></div>
             </div>`;
-                $('.basic').append(optionup);
-                var optiondowntitle = `<div class="row"><span style="margin-left: 10vw ;color: #3EAACC">${downtitle}</span>
-<div style="width: 25vw;height: 1px;background: #3EAACC"></div><div>`;
-                $('.basic').append(optiondowntitle);
             }
+            $('.basic').append(optionup);
+            var optiondowntitle = `<div class="row"><span style="margin-left: 10vw ;color: #3EAACC">${downtitle}</span>
+            <div style="width: 25vw;height: 1px;background: #3EAACC"></div><div>`;
+            $('.basic').append(optiondowntitle);
             if (down.length%2 === 0) {
                 var optiondown = '';
                 for (var i = 0; i < down.length; i=i+2) {
@@ -226,8 +226,8 @@ function dataIfo(json,down,up,downtitle,uptitle) {
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${down[i].head+down[i].value}</span></div>
                <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1vw;padding: 0">${down[i+1].head+down[i+1].value}</span></div>
                </div>`;
-                    $('.basic').append(optiondown);
                 }
+                $('.basic').append(optiondown);
             }else if (down.length%2 === 1){
                 var optiondown = '';
                 for (var i = 0; i < down.length-1; i=i+2) {
@@ -235,8 +235,8 @@ function dataIfo(json,down,up,downtitle,uptitle) {
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${down[i].head+down[i].value}</span></div>
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1vw;padding: 0">${down[i+1].head+down[i+1].value}</span></div>
                 </div>`;
-                    $('.basic').append(optiondown);
                 }
+                $('.basic').append(optiondown);
                 var optiondown1 = `<div class="row">
                     <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="margin-left: 1.2vw ;padding: 0">${down[down.length-1].head+down[down.length-1].value}</span></div>
                 </div>`;
