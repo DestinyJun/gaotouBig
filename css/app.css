@@ -91,6 +91,7 @@ ul {
     font-size: 1rem;
     width: 24vw;
     text-align: center;
+    padding-bottom: 1vh;
     /*line-height: 5vh;*/
 }
 
@@ -165,16 +166,35 @@ ul {
     margin-top: 17vh;
 }
 
+/*.basic {*/
+    /*width: 24vw;*/
+    /*height: 20vh;*/
+    /*!*overflow-x: hidden;*!*/
+    /*overflow: auto;*/
+    /*overflow-y: scroll;*/
+    /*text-align: center;*/
+    /*color: #3EAACC;*/
+/*}*/
 .basic {
     width: 24vw;
     height: 20vh;
-    /*overflow-x: hidden;*/
-    overflow: auto;
-    overflow-y: scroll;
-    text-align: center;
+    /*overflow: auto;*/
+    /*overflow-y: scroll;*/
     color: #3EAACC;
 }
-
+.basic .basicDiv{
+    position: absolute;
+    overflow: hidden;
+    color: #3EAACC;
+    /*text-align: center;*/
+    width: 24vw;
+    height: 20vh;
+}
+.basic .basicDiv ul{
+    margin: 0.1vw;
+    width: 24vw;
+    /*height: 10vh;*/
+}
 .bar > .rt, .rb, .lt, .lb {
     width: 10px;
     height: 10px;
@@ -256,7 +276,7 @@ ul {
 }
 .graph .toiletTitle{
     color: #3EAACC;
-    font-size: 0.875rem;
+    font-size: 1rem;
     text-align: center;
     margin-top: 0.2rem
 }
@@ -435,7 +455,7 @@ ul {
 }
 .dashboard  .carportTitle{
     color: #3EAACC;
-    font-size: 0.875rem;
+    font-size: 1rem;
     text-align: center;
     margin-top: 0.2rem
 }
@@ -571,7 +591,9 @@ li {
 .bottomtext span {
     color: rgba(0, 0, 0, 0);
 }
-
+.basic {
+    font-size: 1rem;
+}
 /*.rightMenu .video{*/
 /*width: 24vw;*/
 /*height: 18vh;*/

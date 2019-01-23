@@ -73,7 +73,8 @@ function getPeopleInfo() {
             var downInfo = [];
             var downtitle ;
             var uptitle ;
-            console.log(result.data.downAttributeValues);
+            var downtotaltitle = result.data.description;
+            // console.log(result.data.description);
             downtitle = result.data.downAttributeValues.source+'-->'+result.data.downAttributeValues.destination;
             uptitle = result.data.upAttributeValues.source+'-->'+result.data.upAttributeValues.destination;
             for (var i = 0; i < result.data.commonAttributeValues.length; i++) {
@@ -101,7 +102,9 @@ function getPeopleInfo() {
                 }
             }
             console.log(upInfo);
-            dataIfo(dataInfo,downInfo,upInfo,downtitle,uptitle);
+            dataIfo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
+            dataIfotwo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
+            // setInterval(basicSetData(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle),2000);
         }
     });
 }
