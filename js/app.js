@@ -74,10 +74,10 @@ function getPeopleInfo() {
             var downtitle ;
             var uptitle ;
             var downtotaltitle = result.data.description;
-            // console.log(result.data.description);
+            console.log(result.data);
             downtitle = result.data.downAttributeValues.source+'-->'+result.data.downAttributeValues.destination;
             uptitle = result.data.upAttributeValues.source+'-->'+result.data.upAttributeValues.destination;
-            for (var i = 0; i < result.data.commonAttributeValues.length; i++) {
+            for (let i = 0; i < result.data.commonAttributeValues.length; i++) {
                 if(result.data.commonAttributeValues[i].show){
                     dataInfo.push({
                         'head': result.data.commonAttributeValues[i].attributeDesc + '：',
@@ -85,7 +85,7 @@ function getPeopleInfo() {
                     })
                 }
             }
-            for (var i = 0; i < result.data.downAttributeValues.attributeValues.length; i++) {
+            for (let i = 0; i < result.data.downAttributeValues.attributeValues.length; i++) {
                 if (result.data.downAttributeValues.attributeValues[i].show){
                     downInfo.push({
                         'head': result.data.downAttributeValues.attributeValues[i].attributeDesc + '：',
@@ -93,7 +93,7 @@ function getPeopleInfo() {
                     })
                 }
             }
-            for (var i = 0; i < result.data.upAttributeValues.attributeValues.length; i++) {
+            for (let i = 0; i < result.data.upAttributeValues.attributeValues.length; i++) {
                 if (result.data.upAttributeValues.attributeValues[i].show){
                     upInfo.push({
                         'head': result.data.upAttributeValues.attributeValues[i].attributeDesc + '：',
@@ -101,7 +101,7 @@ function getPeopleInfo() {
                     })
                 }
             }
-            console.log(upInfo);
+            console.log(downtotaltitle);
             dataIfo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
             dataIfotwo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
             // setInterval(basicSetData(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle),2000);
@@ -117,8 +117,6 @@ function getPeopleMap() {
         data: json,
         contentType: "application/json",
         success: function (result) {
-            // console.log(result.data);
-            // carData(result.data);
             const myChartMap = echarts.init(document.getElementById('Map'));
             Bmap(myChartMap, result.data);
         }
@@ -159,26 +157,38 @@ function getCarNum() {
 
 // 右边车辆饼状图
 function getCarPie() {
+
     $.ajax({
-        url: url + "/serviceArea/realTime/vehicle/vechileTypePie/" + value,
+        url: url + "/serviceArea/realTime/passenger/nationwideDistributeMap/" + value,
         type: "GET",
         data: json,
         contentType: "application/json",
         success: function (result) {
-            // console.log(result.data);
-            // carData(result.data);
-            var datapie = [];
-            for (let i = 0; i < result.data.length; i++) {
-                datapie.push({'name': result.data[i].name, 'value': result.data[i].value})
-            }
-            console.log(datapie);
             const myChartpie = echarts.init(document.getElementById('pie'));
-            pie(myChartpie, datapie);
-            // for (var j = 0; j < result.data.length ; j++) {
-            //     datapie.push({'name':result.datap[j].name,'value':result.datap[j].value})
-            // }
+            BPie(myChartpie, result.data);
         }
     });
+
+    // $.ajax({
+    //     url: url + "/serviceArea/realTime/vehicle/vechileTypePie/" + value,
+    //     type: "GET",
+    //     data: json,
+    //     contentType: "application/json",
+    //     success: function (result) {
+    //         // console.log(result.data);
+    //         // carData(result.data);
+    //         var datapie = [];
+    //         for (let i = 0; i < result.data.length; i++) {
+    //             datapie.push({'name': result.data[i].name, 'value': result.data[i].value})
+    //         }
+    //         console.log(datapie);
+    //         Bmap(myChartpie, result.data);
+    //         // pie(myChartpie, datapie);
+    //         // for (var j = 0; j < result.data.length ; j++) {
+    //         //     datapie.push({'name':result.datap[j].name,'value':result.datap[j].value})
+    //         // }
+    //     }
+    // });
 }
 
 function getCarportData() {

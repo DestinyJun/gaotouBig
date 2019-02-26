@@ -80,6 +80,7 @@ ul {
     width: 100vw;
     height: 100vh;
     position:fixed;
+    background: #213134;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-position: center 0;
@@ -514,15 +515,93 @@ ul {
     bottom: -2px;
 }
 
+/*中间*/
+.video {
+    position: absolute;
+    top: 26vh;
+    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: 8vh;
+    right: 26vw;
+    width: 48vw;
+    height: 40vh;
+}
+.video > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+.video .lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
+    left: -2px;
+    top: -2px;
+}
+
+.video .rt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
+    right: -2px;
+    top: -2px;
+}
+
+.video .rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
+    right: -2px;
+    bottom: -2px;
+}
+
+.video .lb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
+    left: -2px;
+    bottom: -2px;
+}
+.Introduction {
+    position: absolute;
+    top: 68vh;
+    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: 8vh;
+    right: 26vw;
+    width: 48vw;
+    height: 18vh;
+}
+.Introduction > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+.Introduction .lt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
+    left: -2px;
+    top: -2px;
+}
+
+.Introduction .rt {
+    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
+    right: -2px;
+    top: -2px;
+}
+
+.Introduction .rb {
+    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
+    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
+    right: -2px;
+    bottom: -2px;
+}
 /*中间底部文字滚动*/
 .bottom {
     position: absolute;
-    right: 30vw;
+    right: 26vw;
+    width: 48vw;
     top: 8vh;
-    width: 40vw;
-    height: 12vh;
-    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.9) inset;
-    background: rgba(50, 50, 50, 0.8);
+    height: 24vh;
+    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .bottomDiv {
@@ -530,11 +609,87 @@ ul {
     overflow: hidden;
     color: #3EAACC;
     line-height: 12vh;
-    /*text-align: center;*/
-    width: 40vw;
-    height: 12vh;
-    margin-left: 1rem;
+    width: 48vw;
+    height: 24vh;
+    /*margin-left: 1rem;*/
 }
+
+
+#banner {
+    position: relative;
+    width: 48vw;
+    height: 24vh;
+    border: 1px solid #666;
+    overflow: hidden;
+}
+
+#banner_list img {
+    width: 48vw;
+    height: 24vh;
+}
+
+#banner_bg {
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    height: 30px;
+    filter: Alpha(Opacity=30);
+    opacity: 0.3;
+    z-index: 1000;
+    cursor: pointer;
+    width: 40vw;
+}
+
+#banner_info {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    height: 22px;
+    color: #fff;
+    z-index: 1001;
+    cursor: pointer
+}
+
+#banner_text {
+    position: absolute;
+    width: 120px;
+    z-index: 1002;
+    right: 3px;
+    bottom: 3px;
+}
+
+#banner ul {
+    position: absolute;
+    list-style-type: none;
+    filter: Alpha(Opacity=80);
+    opacity: 0.8;
+    z-index: 1002;
+    margin: 0;
+    padding: 0;
+    bottom: 3px;
+    right: 5px;
+}
+
+#banner ul li {
+    padding: 0px 8px;
+    float: left;
+    display: block;
+    color: #FFF;
+    background: #6f4f67;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+#banner ul li.on {
+    background-color: #000;
+}
+
+#banner_list a {
+    position: absolute;
+}
+
+
+
 
 .all {
     width: 10px;

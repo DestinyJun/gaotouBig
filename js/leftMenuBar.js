@@ -200,7 +200,7 @@ function dataIfo(json,down,up,downtitle,uptitle,downtotaltitle) {
                 $('#basicli').append(optiondown1);
             }
         }
-        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 0.1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
+        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
         $('#basicli').append(optiondowntitle);
     }else if (json.length %2 === 1){
         var option = '';
@@ -294,7 +294,7 @@ function dataIfo(json,down,up,downtitle,uptitle,downtotaltitle) {
                 $('#basicli').append(optiondown1);
             }
         }
-        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 0.1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
+        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
         $('#basicli').append(optiondowntitle);
     }
 }
@@ -386,7 +386,7 @@ function dataIfotwo(json,down,up,downtitle,uptitle,downtotaltitle) {
                 $('#basiclitwo').append(optiondown1);
             }
         }
-        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 0.1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
+        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:0.1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
         $('#basiclitwo').append(optiondowntitle);
     }else if (json.length %2 === 1){
         var option = '';
@@ -480,7 +480,7 @@ function dataIfotwo(json,down,up,downtitle,uptitle,downtotaltitle) {
                 $('#basiclitwo').append(optiondown1);
             }
         }
-        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 0.1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
+        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:0.1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
         $('#basiclitwo').append(optiondowntitle);
     }
 }
@@ -490,15 +490,10 @@ function dataIfotwo(json,down,up,downtitle,uptitle,downtotaltitle) {
 var basicspeed = 150;
 setInterval(basicMarquee,basicspeed);
 var basicdiv = document.getElementById('basicdiv');
-var basicul = document.getElementById('basicul');
-// basicdiv.onmouseover=function(){clearInterval(basic)};
-// basicdiv.onmouseout=function(){basic=setInterval(basicMarquee,basicspeed); };
-// setInterval(setdata1,9000);
-// setInterval(removeli1,17000);
 //滚动函数
 var flag = 1;
 function basicMarquee(){
-    if(basicdiv.scrollTop>=basicdiv.offsetHeight+250){
+    if(basicdiv.scrollTop>=basicdiv.offsetHeight+195){
         // basicdiv.scrollTop=0;
         if (flag %2 ===1){
             $('#basicul').append($('#basicli'));
@@ -515,21 +510,7 @@ function basicMarquee(){
 
     }
 }
-//设置列表
-// function setdata1() {
-//
-//
-// }
 
-// 移除列表
-// function removeli1() {
-//     var lis = $('#ul').children("li");
-//     if(lis.length > 3) {
-//         for (var i=0 ;i <lis.length-3;i++){
-//             lis[i].remove();
-//         }
-//     }
-// }
 
 
 
