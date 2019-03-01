@@ -518,13 +518,13 @@ ul {
 /*中间*/
 .video {
     position: absolute;
-    top: 26vh;
+    top: 18vh;
     box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
     background: rgba(0, 0, 0, 0.6);
     margin-top: 8vh;
     right: 26vw;
     width: 48vw;
-    height: 40vh;
+    height: 42vh;
 }
 .video > .rt, .rb, .lt, .lb {
     width: 10px;
@@ -560,13 +560,13 @@ ul {
 }
 .Introduction {
     position: absolute;
-    top: 68vh;
+    top: 62vh;
     box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
     background: rgba(0, 0, 0, 0.6);
     margin-top: 8vh;
     right: 26vw;
     width: 48vw;
-    height: 18vh;
+    height: 24vh;
 }
 .Introduction > .rt, .rb, .lt, .lb {
     width: 10px;
@@ -599,7 +599,7 @@ ul {
     right: 26vw;
     width: 48vw;
     top: 8vh;
-    height: 24vh;
+    height: 16vh;
     box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
     background: rgba(0, 0, 0, 0.6);
 }
@@ -613,8 +613,11 @@ ul {
     height: 24vh;
     /*margin-left: 1rem;*/
 }
-
-
+.bottomDiv img{
+    width: 47vw;
+    height: 14vh;
+    margin: 0.5rem;
+}
 #banner {
     position: relative;
     width: 48vw;
@@ -623,9 +626,20 @@ ul {
     overflow: hidden;
 }
 
-#banner_list img {
+#banner_list div {
     width: 48vw;
     height: 24vh;
+}
+#banner_list div > p  {
+    float: right;
+    /*height: 24vh;*/
+}
+#banner_list div >img {
+    position: absolute;
+    width: 18vw;
+    height: 22vh;
+    margin: 0.6rem;
+    /*margin-bottom: 1vh;*/
 }
 
 #banner_bg {
@@ -671,7 +685,7 @@ ul {
 }
 
 #banner ul li {
-    padding: 0px 8px;
+    padding: 0 8px;
     float: left;
     display: block;
     color: #FFF;
@@ -684,7 +698,7 @@ ul {
     background-color: #000;
 }
 
-#banner_list a {
+#banner_list div {
     position: absolute;
 }
 
