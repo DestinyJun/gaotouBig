@@ -20,7 +20,7 @@ var divoption ='';
 // </div>
 divoption = `<div class="bottom">
     <div class="bottomDiv" id="div">
-     <img src="../lib/image/1-1.jpg">
+     <img src="../lib/image/1-1.png">
     </div>
     <div class="lt all"></div>
     <div class="rt all"></div>
