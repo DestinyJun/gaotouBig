@@ -518,13 +518,12 @@ ul {
 /*中间*/
 .video {
     position: absolute;
-    top: 18vh;
+    top: 17vh;
     box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
     background: rgba(0, 0, 0, 0.6);
-    margin-top: 8vh;
     right: 26vw;
     width: 48vw;
-    height: 42vh;
+    height: 51vh;
 }
 .video > .rt, .rb, .lt, .lb {
     width: 10px;
@@ -599,7 +598,7 @@ ul {
     right: 26vw;
     width: 48vw;
     top: 8vh;
-    height: 16vh;
+    height: 6.5vh;
     box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
     background: rgba(0, 0, 0, 0.6);
 }
@@ -608,15 +607,10 @@ ul {
     position: absolute;
     overflow: hidden;
     color: #3EAACC;
-    line-height: 12vh;
+    line-height: 6.5vh;
     width: 48vw;
-    height: 24vh;
+    height: 6.5vh;
     /*margin-left: 1rem;*/
-}
-.bottomDiv img{
-    width: 47vw;
-    height: 14vh;
-    margin: 0.5rem;
 }
 #banner {
     position: relative;

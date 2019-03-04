@@ -19,8 +19,8 @@ var divoption ='';
 //     <div class="rb all"></div>
 // </div>
 divoption = `<div class="bottom">
-    <div class="bottomDiv" id="div">
-     <img src="../lib/image/1-1.png">
+    <div class="bottomDiv" id="div" style="text-align: center">
+     贵州高投集团
     </div>
     <div class="lt all"></div>
     <div class="rt all"></div>
