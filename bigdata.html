@@ -164,7 +164,7 @@
     </div>
     <!--2、车流饼状图-->
     <div class="pie rightMenu">
-        <div style="color: #3EAACC;font-size: 1rem;text-align: center;margin-top: 0.2rem">车流类型分布</div>
+        <div style="color: #3EAACC;font-size: 1rem;text-align: center;margin-top: 0.2rem">车流分布</div>
         <div style="width: 24vw;height: 28vh" id="pie"></div>
         <div class="lt"></div>
         <div class="rt"></div>
@@ -195,20 +195,38 @@
 
 <!--中间-->
 <div>
-    <div class="video">
-        <div style="color: #3EAACC;font-size: 1rem;text-align: center;margin-top: 0.2rem;height: 3vh;line-height: 3vh;">视频播放</div>
-        <!--<embed src='http://player.youku.com/player.php/sid/XNDA2ODMyMTMxMg==/v.swf' allowFullScreen='true' play=“true” quality='high' width="100%" height='270' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>-->
-        <!--</div>-->
-        <video id="video" style="object-fit: fill;width: 100%;height: 48vh" autoplay>
+    <!--中间头部logo-->
+    <div class="bottom">
+        <div class="bottomDiv" id="div" style="text-align: center">
+            贵州高投集团
+        </div>
+        <div class="lt all"></div>
+        <div class="rt all"></div>
+        <div class="lb all"></div>
+        <div class="rb all"></div>
+    </div>
+    <!--视频播放-->
+    <div class="video" style="line-height: 51vh">
+        <!--视频标题-->
+        <div  style="color: #3EAACC;font-size: 1rem;text-align: center;margin-top: 0.2rem;height: 3vh;line-height: 3vh;">视频播放</div>
+        <!--左边图片-->
+        <div class="leftvideo videoPhoto" id="leftImg" onclick="leftimgclick()">
+            <i class="fa fa-angle-left" style="position: absolute;"></i>
+        </div>
+        <!--右边图片-->
+        <div class="rightvideo videoPhoto" id="rightImg" onclick="rightimgclick()">
+            <i class="fa fa-angle-right" style="position: absolute"></i>
+        </div>
+        <!--中间视频-->
+        <video id="video" style="object-fit: fill;width: 100%;height: 48vh" autoplay muted="muted">
             <source src="lib/video/test.webm" type="video/webm">
-            <!--<source src="movie.ogg" type="video/ogg">-->
-            <!--<source src="movie.webm" type="video/webm">-->
         </video>
         <div class="lt"></div>
         <div class="rt"></div>
         <div class="rb"></div>
         <div class="lb"></div>
     </div>
+    <!--轮播图-->
     <div class="Introduction">
         <!--<div style="color: #3EAACC;font-size: 1rem;text-align: center;margin-top: 0.2rem">下个服务区介绍</div>-->
         <!--<div style="width: 24vw;height:28vh"></div>-->
@@ -265,6 +283,9 @@
         <div class="rb"></div>
         <div class="lb"></div>
     </div>
+
+    <!--设置底部的版权信息-->
+    <div class="bottomtext" >版权所有：贵州高投服务管理有限公司 <span>123</span> 技术支持：贵阳红鸟智能技术服务有限公司</div>
 </div>
 </body>
 <script src="./node_modules/jquery/dist/jquery.js"></script>

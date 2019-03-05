@@ -110,33 +110,33 @@ ul {
     position: absolute;
 }
 
-.title .lt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    top: -2px;
-}
+/*.title .lt {*/
+    /*border-top: 1.5px solid rgba(0, 211, 231, 0.5);*/
+    /*border-left: 1.5px solid rgba(0, 211, 231, 0.5);*/
+    /*left: -2px;*/
+    /*top: -2px;*/
+/*}*/
 
-.title .rt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    top: -2px;
-}
+/*.title .rt {*/
+    /*border-top: 1.5px solid rgba(0, 211, 231, 0.5);*/
+    /*border-right: 1.5px solid rgba(0, 211, 231, 0.5);*/
+    /*right: -2px;*/
+    /*top: -2px;*/
+/*}*/
 
-.title .rb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    bottom: -2px;
-}
+/*.title .rb {*/
+    /*border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);*/
+    /*border-right: 1.5px solid rgba(0, 211, 231, 0.5);*/
+    /*right: -2px;*/
+    /*bottom: -2px;*/
+/*}*/
 
-.title .lb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    bottom: -2px;
-}
+/*.title .lb {*/
+    /*border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);*/
+    /*border-left: 1.5px solid rgba(0, 211, 231, 0.5);*/
+    /*left: -2px;*/
+    /*bottom: -2px;*/
+/*}*/
 
 .title .title-left {
     font-size: 1.4rem;
@@ -167,27 +167,15 @@ ul {
     margin-top: 17vh;
 }
 
-/*.basic {*/
-    /*width: 24vw;*/
-    /*height: 20vh;*/
-    /*!*overflow-x: hidden;*!*/
-    /*overflow: auto;*/
-    /*overflow-y: scroll;*/
-    /*text-align: center;*/
-    /*color: #3EAACC;*/
-/*}*/
 .basic {
     width: 24vw;
     height: 20vh;
-    /*overflow: auto;*/
-    /*overflow-y: scroll;*/
     color: #3EAACC;
 }
 .basic .basicDiv{
     position: absolute;
     overflow: hidden;
     color: #3EAACC;
-    /*text-align: center;*/
     width: 24vw;
     height: 20vh;
 }
@@ -202,34 +190,6 @@ ul {
     position: absolute;
 }
 
-.bar .lt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    top: -2px;
-}
-
-.bar .rt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    top: -2px;
-}
-
-.bar .rb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    bottom: -2px;
-}
-
-.bar .lb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    bottom: -2px;
-}
-
 .Map {
     width: 24vw;
     height: 32vh;
@@ -240,34 +200,6 @@ ul {
     width: 10px;
     height: 10px;
     position: absolute;
-}
-
-.Map .lt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    top: -2px;
-}
-
-.Map .rt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    top: -2px;
-}
-
-.Map .rb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    bottom: -2px;
-}
-
-.Map .lb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    bottom: -2px;
 }
 
 .graph {
@@ -308,33 +240,6 @@ ul {
     position: absolute;
 }
 
-.graph .lt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    top: -2px;
-}
-
-.graph .rt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    top: -2px;
-}
-
-.graph .rb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    bottom: -2px;
-}
-
-.graph .lb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    bottom: -2px;
-}
 
 .rightMenu {
     position: absolute;
@@ -373,34 +278,6 @@ ul {
     position: absolute;
 }
 
-.weather .lt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    top: -2px;
-}
-
-.weather .rt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    top: -2px;
-}
-
-.weather .rb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    bottom: -2px;
-}
-
-.weather .lb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    bottom: -2px;
-}
-
 .weather .title-left {
     font-size: 0.8rem;
 }
@@ -415,34 +292,6 @@ ul {
     width: 10px;
     height: 10px;
     position: absolute;
-}
-
-.pie .lt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    top: -2px;
-}
-
-.pie .rt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    top: -2px;
-}
-
-.pie .rb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    bottom: -2px;
-}
-
-.pie .lb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    bottom: -2px;
 }
 
 .pie .title-left {
@@ -487,33 +336,6 @@ ul {
     position: absolute;
 }
 
-.dashboard .lt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    top: -2px;
-}
-
-.dashboard .rt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    top: -2px;
-}
-
-.dashboard .rb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    bottom: -2px;
-}
-
-.dashboard .lb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    bottom: -2px;
-}
 
 /*中间*/
 .video {
@@ -524,38 +346,29 @@ ul {
     right: 26vw;
     width: 48vw;
     height: 51vh;
+
 }
-.video > .rt, .rb, .lt, .lb {
-    width: 10px;
-    height: 10px;
+.video .leftvideo{
+    left: 1vw
+}
+.video .rightvideo{
+    left: 43vw;
+}
+.video .videoPhoto {
     position: absolute;
+    z-index: 9999;
+    width: 3vw;
+    height: 9vh;
+    background:rgba(90, 90, 90, 0.8);
+    top: 25.5vh;
+    opacity: 0.65;
 }
-.video .lt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    top: -2px;
-}
-
-.video .rt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    top: -2px;
-}
-
-.video .rb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    bottom: -2px;
-}
-
-.video .lb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    bottom: -2px;
+.video .videoPhoto i{
+    font-size: 4rem;
+    line-height: 8vh;
+    /*text-align: center;*/
+    margin-left: 1vw;
+    color: white;
 }
 .Introduction {
     position: absolute;
@@ -565,32 +378,12 @@ ul {
     margin-top: 8vh;
     right: 26vw;
     width: 48vw;
-    height: 24vh;
+    height: 26vh;
 }
 .Introduction > .rt, .rb, .lt, .lb {
     width: 10px;
     height: 10px;
     position: absolute;
-}
-.Introduction .lt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-left: 1.5px solid rgba(0, 211, 231, 0.5);
-    left: -2px;
-    top: -2px;
-}
-
-.Introduction .rt {
-    border-top: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    top: -2px;
-}
-
-.Introduction .rb {
-    border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);
-    border-right: 1.5px solid rgba(0, 211, 231, 0.5);
-    right: -2px;
-    bottom: -2px;
 }
 /*中间底部文字滚动*/
 .bottom {
@@ -610,30 +403,26 @@ ul {
     line-height: 6.5vh;
     width: 48vw;
     height: 6.5vh;
-    /*margin-left: 1rem;*/
 }
 #banner {
     position: relative;
     width: 48vw;
-    height: 24vh;
-    border: 1px solid #666;
+    height: 26vh;
     overflow: hidden;
 }
 
 #banner_list div {
     width: 48vw;
-    height: 24vh;
+    height: 26vh;
 }
 #banner_list div > p  {
     float: right;
-    /*height: 24vh;*/
 }
 #banner_list div >img {
     position: absolute;
     width: 18vw;
-    height: 22vh;
+    height: 24vh;
     margin: 0.6rem;
-    /*margin-bottom: 1vh;*/
 }
 
 #banner_bg {
@@ -696,9 +485,6 @@ ul {
     position: absolute;
 }
 
-
-
-
 .all {
     width: 10px;
     height: 10px;
@@ -743,8 +529,7 @@ li {
     position: absolute;
     width: 30vw;
     background: rgba(0, 0, 0, 0.6);
-    bottom: 2vh;
-    bottom: 2vh;
+    bottom: 1.7vh;
     left: 35vw;
     color: white;
     font-size: 0.7rem;
@@ -757,7 +542,3 @@ li {
 .basic {
     font-size: 1rem;
 }
-/*.rightMenu .video{*/
-/*width: 24vw;*/
-/*height: 18vh;*/
-/*}*/
