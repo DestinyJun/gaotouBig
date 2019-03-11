@@ -6,6 +6,8 @@ var url = 'http://120.77.171.73:8080/highway-sabd';
 var value = window.localStorage.getItem("id");
 var title = window.sessionStorage.getItem("title");
 
+// console.log(value);
+console.log(title);
 // 设置页面的title
 $('#title').text(title);
 
@@ -15,7 +17,7 @@ clock();
 
 //获取传入的参数
 var json = getJson();
-
+console.log(json);
 
 //左边
 //1、实时请求客流
@@ -46,6 +48,7 @@ getCarportData();
 
 //左边客流请求函数
 function getPeopleNum() {
+    console.log(value);
     $.ajax({
         url: url + "/serviceArea/realTime/passenger/total/" + value,
         type: "GET",
@@ -102,9 +105,67 @@ function getPeopleInfo() {
                 }
             }
             console.log(downtotaltitle);
+            console.log(downtitle);
+            console.log(uptitle);
+            // if(downtotaltitle!=null){
             dataIfo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
             dataIfotwo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
-            // setInterval(basicSetData(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle),2000);
+            if (downtotaltitle == null){
+                $('#downtitle p').text('');
+                var basicspeed = 150;
+                setInterval(basicMarquee,basicspeed);
+                var basicdiv = document.getElementById('basicdiv');
+//滚动函数
+                var flag = 1;
+                function basicMarquee(){
+
+
+                    if(basicdiv.scrollTop>=basicdiv.offsetHeight+60){
+
+                        // basicdiv.scrollTop=0;
+                        if (flag %2 ===1){
+                            $('#basicul').append($('#basicli'));
+
+                        } else {
+                            $('#basicul').append($('#basiclitwo'));
+                        }
+                        flag++;
+                        // console.log(basicdiv.offsetHeight);
+                    }
+                    else{
+                        basicdiv.scrollTop=basicdiv.scrollTop+1;
+                        // console.log(basicdiv.scrollTop);
+
+                    }
+                }
+            }else {
+                var basicspeed = 150;
+                setInterval(basicMarquee,basicspeed);
+                var basicdiv = document.getElementById('basicdiv');
+//滚动函数
+                var flag = 1;
+                function basicMarquee(){
+
+
+                    if(basicdiv.scrollTop>=basicdiv.offsetHeight+148){
+
+                        // basicdiv.scrollTop=0;
+                        if (flag %2 ===1){
+                            $('#basicul').append($('#basicli'));
+
+                        } else {
+                            $('#basicul').append($('#basiclitwo'));
+                        }
+                        flag++;
+                        // console.log(basicdiv.offsetHeight);
+                    }
+                    else{
+                        basicdiv.scrollTop=basicdiv.scrollTop+1;
+                        // console.log(basicdiv.scrollTop);
+
+                    }
+                }
+            }
         }
     });
 }
@@ -206,5 +267,4 @@ function getCarportData() {
     // const myChartdashboard3 = echarts.init(document.getElementById('dashboard3'));
     // dashboard3(myChartdashboard3, '货车车位');
 }
-
 

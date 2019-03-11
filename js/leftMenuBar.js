@@ -113,6 +113,7 @@ basicoption = `<div class="basicDiv" id="basicdiv">
 $('.basic').html(basicoption);
 
 function dataIfo(json,down,up,downtitle,uptitle,downtotaltitle) {
+
     if (json.length % 2 === 0){
         var options = '';
         for (var i = 0; i < json.length; i=i+2) {
@@ -140,16 +141,16 @@ function dataIfo(json,down,up,downtitle,uptitle,downtotaltitle) {
             if (down.length%2 === 0) {
                 var optiondown = '';
                 for (var i = 0; i < down.length; i=i+2) {
-                optiondown += `<div class="row">
+                    optiondown += `<div class="row">
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${down[i].head+down[i].value}</span></div>
                <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${down[i+1].head+down[i+1].value}</span></div>
                </div>`;
-              }
-              $('#basicli').append(optiondown);
+                }
+                $('#basicli').append(optiondown);
             }else if (down.length%2 === 1){
                 var optiondown = '';
                 for (var i = 0; i < down.length-1; i=i+2) {
-                 optiondown += `<div class="row">
+                    optiondown += `<div class="row">
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${down[i].head+down[i].value}</span></div>
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${down[i+1].head+down[i+1].value}</span></div>
                 </div>`;
@@ -163,7 +164,7 @@ function dataIfo(json,down,up,downtitle,uptitle,downtotaltitle) {
         } else if (up.length%2 === 1){
             var optionup1 = '';
             for (var i = 0; i < up.length-1; i=i+2) {
-            optionup1 += `<div class="row">
+                optionup1 += `<div class="row">
             <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${up[i].head+up[i].value}</span></div>
             <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${up[i+1].head+up[i+1].value}</span></div>
             </div>`;
@@ -200,7 +201,8 @@ function dataIfo(json,down,up,downtitle,uptitle,downtotaltitle) {
                 $('#basicli').append(optiondown1);
             }
         }
-        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
+        var optiondowntitle = `<div id="downtitle"><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
+
         $('#basicli').append(optiondowntitle);
     }else if (json.length %2 === 1){
         var option = '';
@@ -211,13 +213,13 @@ function dataIfo(json,down,up,downtitle,uptitle,downtotaltitle) {
           </div>`;
         }
         $('#basicli').html(option);
-       var  option1 = `<div class="row">
+        var  option1 = `<div class="row">
        <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${json[json.length-1].head+json[json.length-1].value}</span></div>
        </div>`;
-      $('#basicli').append(option1);
-      var optiontitle = `<div class="row"><span style="margin-left: 8vw ;color: #3EAACC;text-align: center">${uptitle}</span>
+        $('#basicli').append(option1);
+        var optiontitle = `<div class="row"><span style="margin-left: 8vw ;color: #3EAACC;text-align: center">${uptitle}</span>
        <div style="width: 25vw;height: 2px;background: #ffffff"></div><div>`;
-       $('#basicli').append(optiontitle);
+        $('#basicli').append(optiontitle);
         if (up.length%2 === 0){
             var optionup = '';
             for (var i = 0; i < up.length; i=i+2) {
@@ -262,10 +264,10 @@ function dataIfo(json,down,up,downtitle,uptitle,downtotaltitle) {
             </div>`;
             }
             $('#basicli').append(optionup1);
-             var optionup2= `<div class="row">
+            var optionup2= `<div class="row">
              <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${up[up.length-1].head+up[up.length-1].value}</span></div>
              </div>`;
-                $('#basicli').append(optionup2);
+            $('#basicli').append(optionup2);
             var optiondowntitle = `<div class="row"><span style="margin-left: 8vw ;color: #ffffff">${downtitle}</span>
             <div style="width: 25vw;height: 2px;background: #ffffff"></div><div>
                      `;
@@ -294,7 +296,7 @@ function dataIfo(json,down,up,downtitle,uptitle,downtotaltitle) {
                 $('#basicli').append(optiondown1);
             }
         }
-        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
+        var optiondowntitle = `<div id="downtitle"><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
         $('#basicli').append(optiondowntitle);
     }
 }
@@ -326,16 +328,16 @@ function dataIfotwo(json,down,up,downtitle,uptitle,downtotaltitle) {
             if (down.length%2 === 0) {
                 var optiondown = '';
                 for (var i = 0; i < down.length; i=i+2) {
-                optiondown += `<div class="row">
+                    optiondown += `<div class="row">
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${down[i].head+down[i].value}</span></div>
                <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${down[i+1].head+down[i+1].value}</span></div>
                </div>`;
-              }
-              $('#basiclitwo').append(optiondown);
+                }
+                $('#basiclitwo').append(optiondown);
             }else if (down.length%2 === 1){
                 var optiondown = '';
                 for (var i = 0; i < down.length-1; i=i+2) {
-                 optiondown += `<div class="row">
+                    optiondown += `<div class="row">
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${down[i].head+down[i].value}</span></div>
                 <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${down[i+1].head+down[i+1].value}</span></div>
                 </div>`;
@@ -349,7 +351,7 @@ function dataIfotwo(json,down,up,downtitle,uptitle,downtotaltitle) {
         } else if (up.length%2 === 1){
             var optionup1 = '';
             for (var i = 0; i < up.length-1; i=i+2) {
-            optionup1 += `<div class="row">
+                optionup1 += `<div class="row">
             <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${up[i].head+up[i].value}</span></div>
             <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${up[i+1].head+up[i+1].value}</span></div>
             </div>`;
@@ -386,7 +388,7 @@ function dataIfotwo(json,down,up,downtitle,uptitle,downtotaltitle) {
                 $('#basiclitwo').append(optiondown1);
             }
         }
-        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:0.1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
+        var optiondowntitle = `<div id="downtitle"><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:0.1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
         $('#basiclitwo').append(optiondowntitle);
     }else if (json.length %2 === 1){
         var option = '';
@@ -397,13 +399,13 @@ function dataIfotwo(json,down,up,downtitle,uptitle,downtotaltitle) {
           </div>`;
         }
         $('#basiclitwo').html(option);
-       var  option1 = `<div class="row">
+        var  option1 = `<div class="row">
        <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${json[json.length-1].head+json[json.length-1].value}</span></div>
        </div>`;
-      $('#basiclitwo').append(option1);
-      var optiontitle = `<div class="row"><span style="margin-left: 8vw ;color: #3EAACC;text-align: center">${uptitle}</span>
+        $('#basiclitwo').append(option1);
+        var optiontitle = `<div class="row"><span style="margin-left: 8vw ;color: #3EAACC;text-align: center">${uptitle}</span>
        <div style="width: 25vw;height: 2px;background: #ffffff"></div><div>`;
-       $('#basiclitwo').append(optiontitle);
+        $('#basiclitwo').append(optiontitle);
         if (up.length%2 === 0){
             var optionup = '';
             for (var i = 0; i < up.length; i=i+2) {
@@ -448,10 +450,10 @@ function dataIfotwo(json,down,up,downtitle,uptitle,downtotaltitle) {
             </div>`;
             }
             $('#basiclitwo').append(optionup1);
-             var optionup2= `<div class="row">
+            var optionup2= `<div class="row">
              <div class="col-md-6 col-lg-6" style="padding: 0"><span class="pull-left" style="padding: 0">${up[up.length-1].head+up[up.length-1].value}</span></div>
              </div>`;
-                $('#basiclitwo').append(optionup2);
+            $('#basiclitwo').append(optionup2);
             var optiondowntitle = `<div class="row"><span style="margin-left: 8vw ;color: #ffffff">${downtitle}</span>
             <div style="width: 25vw;height: 2px;background: #ffffff"></div><div>
                      `;
@@ -480,36 +482,20 @@ function dataIfotwo(json,down,up,downtitle,uptitle,downtotaltitle) {
                 $('#basiclitwo').append(optiondown1);
             }
         }
-        var optiondowntitle = `<div><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:0.1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
+        var optiondowntitle = `<div id="downtitle"><p style="margin-top: 0.875rem;margin-left: 1vw;margin-right:0.1vw;text-indent: 2rem;text-align: left">${downtotaltitle}</p></div>`;
         $('#basiclitwo').append(optiondowntitle);
     }
 }
-//
+
+
 // setdata1();
 //设置滚动
-var basicspeed = 150;
-setInterval(basicMarquee,basicspeed);
-var basicdiv = document.getElementById('basicdiv');
-//滚动函数
-var flag = 1;
-function basicMarquee(){
-    if(basicdiv.scrollTop>=basicdiv.offsetHeight+195){
-        // basicdiv.scrollTop=0;
-        if (flag %2 ===1){
-            $('#basicul').append($('#basicli'));
+// if (downtotaltitle == null){
+//     // $('#downtitle').hide();
+//     // document.getElementById('downtitle').hidden;
+// }
 
-        } else {
-            $('#basicul').append($('#basiclitwo'));
-        }
-        flag++;
-        // console.log(basicdiv.offsetHeight);
-    }
-    else{
-        basicdiv.scrollTop=basicdiv.scrollTop+1;
-        // console.log(basicdiv.scrollTop);
 
-    }
-}
 
 
 

@@ -1,4 +1,4 @@
-var video_list = ['lib/video/test.webm', 'lib/video/test.webm','lib/video/test.webm'];//初始化播放列表
+var video_list = ['lib/video/test1.mp4', 'lib/video/test2.mp4','lib/video/test1.mp4'];//初始化播放列表
 var video_length = video_list.length;//播放列表的长度
 var curr=0;//当前播放的视频
 var video = document.getElementById('video');
@@ -21,7 +21,7 @@ function leftimgclick() {
 function rightimgclick() {
     // console.log('34');
     if (curr >= video_length-1){
-      alert('已经是最后一个视频');
+        alert('已经是最后一个视频');
     }else {
         curr++;
         console.log(curr);

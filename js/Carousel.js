@@ -19,12 +19,12 @@ $(document).ready(function() {
         // 切换按钮的时候让上一个按钮回归原来的样式
         $(this).siblings().removeAttr("class");
     });
-    t = setInterval("showAuto()", 4000);
+    t = setInterval("showAuto()", 10000);
     $("#banner").hover(function() {
             clearInterval(t)
         },
         function() {
-            t = setInterval("showAuto()", 4000);
+            t = setInterval("showAuto()", 10000);
         });
 });
 // 自动轮播

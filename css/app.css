@@ -92,7 +92,7 @@ ul {
     font-size: 1rem;
     width: 24vw;
     text-align: center;
-    padding-bottom: 1vh;
+    padding-bottom: 2vh;
     /*line-height: 5vh;*/
 }
 
@@ -111,31 +111,31 @@ ul {
 }
 
 /*.title .lt {*/
-    /*border-top: 1.5px solid rgba(0, 211, 231, 0.5);*/
-    /*border-left: 1.5px solid rgba(0, 211, 231, 0.5);*/
-    /*left: -2px;*/
-    /*top: -2px;*/
+/*border-top: 1.5px solid rgba(0, 211, 231, 0.5);*/
+/*border-left: 1.5px solid rgba(0, 211, 231, 0.5);*/
+/*left: -2px;*/
+/*top: -2px;*/
 /*}*/
 
 /*.title .rt {*/
-    /*border-top: 1.5px solid rgba(0, 211, 231, 0.5);*/
-    /*border-right: 1.5px solid rgba(0, 211, 231, 0.5);*/
-    /*right: -2px;*/
-    /*top: -2px;*/
+/*border-top: 1.5px solid rgba(0, 211, 231, 0.5);*/
+/*border-right: 1.5px solid rgba(0, 211, 231, 0.5);*/
+/*right: -2px;*/
+/*top: -2px;*/
 /*}*/
 
 /*.title .rb {*/
-    /*border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);*/
-    /*border-right: 1.5px solid rgba(0, 211, 231, 0.5);*/
-    /*right: -2px;*/
-    /*bottom: -2px;*/
+/*border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);*/
+/*border-right: 1.5px solid rgba(0, 211, 231, 0.5);*/
+/*right: -2px;*/
+/*bottom: -2px;*/
 /*}*/
 
 /*.title .lb {*/
-    /*border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);*/
-    /*border-left: 1.5px solid rgba(0, 211, 231, 0.5);*/
-    /*left: -2px;*/
-    /*bottom: -2px;*/
+/*border-bottom: 1.5px solid rgba(0, 211, 231, 0.5);*/
+/*border-left: 1.5px solid rgba(0, 211, 231, 0.5);*/
+/*left: -2px;*/
+/*bottom: -2px;*/
 /*}*/
 
 .title .title-left {
@@ -164,7 +164,7 @@ ul {
 .bar {
     width: 24vw;
     height: 24vh;
-    margin-top: 17vh;
+    margin-top: 18vh;
 }
 
 .basic {
@@ -193,7 +193,7 @@ ul {
 .Map {
     width: 24vw;
     height: 32vh;
-    margin-top: 43vh;
+    margin-top: 44vh;
 }
 
 .Map > .rt, .rb, .lt, .lb {
@@ -205,7 +205,7 @@ ul {
 .graph {
     width: 24vw;
     height: 21vh;
-    margin-top: 77vh;
+    margin-top: 78vh;
 }
 .graph .toiletTitle{
     color: #3EAACC;
@@ -256,7 +256,7 @@ ul {
     height: 24vh;
     color: #3EAACC;
     text-align: center;
-    margin-top: 17vh;
+    margin-top: 18vh;
 }
 
 .weather .weatherIcon, .wind {
@@ -285,7 +285,7 @@ ul {
 .pie {
     width: 24vw;
     height: 32vh;
-    margin-top: 43vh;
+    margin-top: 44vh;
 }
 
 .pie > .rt, .rb, .lt, .lb {
@@ -301,7 +301,7 @@ ul {
 .dashboard {
     width: 24vw;
     height: 21vh;
-    margin-top: 77vh;
+    margin-top: 78vh;
 }
 .dashboard  .carportTitle{
     color: #3EAACC;
@@ -338,21 +338,73 @@ ul {
 
 
 /*中间*/
+
+/*中间底部文字滚动*/
+.bottom {
+    position: absolute;
+    right: 26vw;
+    width: 48vw;
+    top: 8vh;
+    height: 7.5vh;
+    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.bottomDiv {
+    position: absolute;
+    overflow: hidden;
+    color: #3EAACC;
+    line-height: 7.5vh;
+    width: 48vw;
+    height: 7.5vh;
+}
+.bottomDiv .gradient {
+    width: 21.5vw;
+    height: 0.3rem;
+    margin-top: 3.5vh;
+}
+
+.bottomDiv .leftline {
+    background: -webkit-linear-gradient(left,rgba(183,214,222,0),rgba(62,170,204,1)); /* Safari 5.1 - 6 */
+    background: -o-linear-gradient(right,rgba(183,214,222,0),rgba(62,170,204,1)); /* Opera 11.1 - 12*/
+    background: -moz-linear-gradient(right,rgba(183,214,222,0),rgba(62,170,204,1)); /* Firefox 3.6 - 15*/
+    background: linear-gradient(to right, rgba(183,214,222,0),rgba(62,170,204,1)); /* 标准的语法 */
+    /*background-color: #3EAACC;*/
+    float: left;
+    margin-left: 0.5vw
+}
+.bottomDiv .rightline {
+    background: -webkit-linear-gradient(right,rgba(183,214,222,0),rgba(62,170,204,1)); /* Safari 5.1 - 6 */
+    background: -o-linear-gradient(left,rgba(183,214,222,0),rgba(62,170,204,1)); /* Opera 11.1 - 12*/
+    background: -moz-linear-gradient(left,rgba(183,214,222,0),rgba(62,170,204,1)); /* Firefox 3.6 - 15*/
+    background: linear-gradient(to left, rgba(183,214,222,0),rgba(62,170,204,1)); /* 标准的语法 */
+    /*background-color: #3EAACC;*/
+    float: right;
+    margin-left: 0.5vw
+}
+
+.bottomDiv img{
+    height: 8.5vh;
+    width: 8.5vh;
+    position: absolute;
+}
+
+/*中间视频*/
 .video {
     position: absolute;
-    top: 17vh;
+    top: 18vh;
     box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
     background: rgba(0, 0, 0, 0.6);
     right: 26vw;
     width: 48vw;
-    height: 51vh;
+    height: 52vh;
 
 }
 .video .leftvideo{
     left: 1vw
 }
 .video .rightvideo{
-    left: 43vw;
+    left: 44vw;
 }
 .video .videoPhoto {
     position: absolute;
@@ -370,90 +422,95 @@ ul {
     margin-left: 1vw;
     color: white;
 }
+.video > .rt, .rb, .lt, .lb {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+
+/*中间轮播图介绍*/
 .Introduction {
     position: absolute;
-    top: 62vh;
+    top: 72vh;
     box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
     background: rgba(0, 0, 0, 0.6);
-    margin-top: 8vh;
+    /*margin-top: 8vh;*/
     right: 26vw;
     width: 48vw;
-    height: 26vh;
+    height: 24vh;
 }
 .Introduction > .rt, .rb, .lt, .lb {
     width: 10px;
     height: 10px;
     position: absolute;
 }
-/*中间底部文字滚动*/
-.bottom {
-    position: absolute;
-    right: 26vw;
-    width: 48vw;
-    top: 8vh;
-    height: 6.5vh;
-    box-shadow: 0 20px 50px rgba(28, 39, 41, 0.8) inset;
-    background: rgba(0, 0, 0, 0.6);
-}
 
-.bottomDiv {
-    position: absolute;
-    overflow: hidden;
-    color: #3EAACC;
-    line-height: 6.5vh;
-    width: 48vw;
-    height: 6.5vh;
-}
 #banner {
     position: relative;
     width: 48vw;
-    height: 26vh;
+    height: 24vh;
     overflow: hidden;
 }
 
 #banner_list div {
     width: 48vw;
-    height: 26vh;
+    height: 24vh;
 }
 #banner_list div > p  {
-    float: right;
+    /*float: right;*/
 }
 #banner_list div >img {
     position: absolute;
     width: 18vw;
-    height: 24vh;
+    height: 21vh;
     margin: 0.6rem;
 }
 
-#banner_bg {
-    position: absolute;
-    bottom: 0;
-    background-color: #000;
-    height: 30px;
-    filter: Alpha(Opacity=30);
-    opacity: 0.3;
-    z-index: 1000;
-    cursor: pointer;
-    width: 40vw;
+#banner_list div .bannertitle {
+    color: #3EAACC;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 19vw;
+    margin-bottom: 0;
+}
+#banner_list div .bannertext{
+    color: #3EAACC;
+    margin-left: 19vw;
+    margin-right:0.875rem;
+    text-indent: 2rem;
+    text-align: left;
+    font-size: 0.9rem
 }
 
-#banner_info {
-    position: absolute;
-    bottom: 0;
-    left: 5px;
-    height: 22px;
-    color: #fff;
-    z-index: 1001;
-    cursor: pointer
-}
+/*#banner_bg {*/
+/*position: absolute;*/
+/*bottom: 0;*/
+/*background-color: #000;*/
+/*height: 30px;*/
+/*filter: Alpha(Opacity=30);*/
+/*opacity: 0.3;*/
+/*z-index: 1000;*/
+/*cursor: pointer;*/
+/*width: 40vw;*/
+/*}*/
 
-#banner_text {
-    position: absolute;
-    width: 120px;
-    z-index: 1002;
-    right: 3px;
-    bottom: 3px;
-}
+/*#banner_info {*/
+/*position: absolute;*/
+/*bottom: 0;*/
+/*left: 5px;*/
+/*height: 15px;*/
+/*color: #fff;*/
+/*z-index: 1001;*/
+/*cursor: pointer*/
+/*}*/
+
+/*#banner_text {*/
+/*position: absolute;*/
+/*width: 120px;*/
+/*z-index: 1002;*/
+/*right: 3px;*/
+/*bottom: 3px;*/
+/*}*/
 
 #banner ul {
     position: absolute;
@@ -465,20 +522,27 @@ ul {
     padding: 0;
     bottom: 3px;
     right: 5px;
+    text-align: center;
 }
 
 #banner ul li {
-    padding: 0 8px;
+    padding: 0 3px;
+    height: 20px;
     float: left;
     display: block;
     color: #FFF;
     background: #6f4f67;
     cursor: pointer;
     border: 1px solid #333;
+    /*text-align: left;*/
+    /*margin-left: qopx;*/
+    line-height: 18px;
+
 }
 
 #banner ul li.on {
     background-color: #000;
+    text-align: center;
 }
 
 #banner_list div {
@@ -529,7 +593,7 @@ li {
     position: absolute;
     width: 30vw;
     background: rgba(0, 0, 0, 0.6);
-    bottom: 1.7vh;
+    bottom: 1.2vh;
     left: 35vw;
     color: white;
     font-size: 0.7rem;
