@@ -196,3 +196,4 @@ function leftCar(cartitle,bigcar,smollcar,truck) {
     $('#leftSmollCarport').text(smollcar);
     $('#leftTruckCarport').text(truck);
 }
+

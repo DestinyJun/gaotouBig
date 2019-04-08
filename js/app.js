@@ -6,7 +6,9 @@ var url = 'http://120.77.171.73:8080/highway-sabd';
 var value = window.localStorage.getItem("id");
 var title = window.sessionStorage.getItem("title");
 
-// console.log(value);
+console.log(window.sessionStorage);
+// console.log(window.sessionStorage.getItem("provinceId"));
+
 console.log(title);
 // 设置页面的title
 $('#title').text(title);
@@ -17,8 +19,9 @@ clock();
 
 //获取传入的参数
 var json = getJson();
-console.log(json);
-
+// console.log(json);
+var jsondata = getData();
+console.log(jsondata);
 //左边
 //1、实时请求客流
 getPeopleNum();
@@ -45,6 +48,14 @@ getCarPie();
 // 车位使用率仪表图
 getCarportData();
 
+//车辆滞留情况
+setInterval(function () {
+    getCarportTime();
+},1000);
+
+
+
+
 
 //左边客流请求函数
 function getPeopleNum() {
@@ -56,7 +67,9 @@ function getPeopleNum() {
         contentType: "application/json",
         success: function (result) {
             // console.log(result);
-            peopelData(result.data);
+            if (result.data) {
+                peopelData(result.data);
+            }
 
         }
     });
@@ -71,101 +84,123 @@ function getPeopleInfo() {
         contentType: "application/json",
         success: function (result) {
             console.log(result);
-            var dataInfo = [];
-            var upInfo = [];
-            var downInfo = [];
-            var downtitle ;
-            var uptitle ;
-            var downtotaltitle = result.data.description;
-            console.log(result.data);
-            downtitle = result.data.downAttributeValues.source+'-->'+result.data.downAttributeValues.destination;
-            uptitle = result.data.upAttributeValues.source+'-->'+result.data.upAttributeValues.destination;
-            for (let i = 0; i < result.data.commonAttributeValues.length; i++) {
-                if(result.data.commonAttributeValues[i].show){
-                    dataInfo.push({
-                        'head': result.data.commonAttributeValues[i].attributeDesc + '：',
-                        'value': result.data.commonAttributeValues[i].value
-                    })
+            if (result.data){
+                var dataInfo = [];
+                var upInfo = [];
+                var downInfo = [];
+                var downtitle ;
+                var uptitle ;
+                var downtotaltitle = result.data.description;
+                // console.log(result.data);
+                downtitle = result.data.downAttributeValues.source+'-->'+result.data.downAttributeValues.destination;
+                uptitle = result.data.upAttributeValues.source+'-->'+result.data.upAttributeValues.destination;
+                for (let i = 0; i < result.data.commonAttributeValues.length; i++) {
+                    if(result.data.commonAttributeValues[i].show){
+                        dataInfo.push({
+                            'head': result.data.commonAttributeValues[i].attributeDesc + '：',
+                            'value': result.data.commonAttributeValues[i].value
+                        })
+                    }
                 }
-            }
-            for (let i = 0; i < result.data.downAttributeValues.attributeValues.length; i++) {
-                if (result.data.downAttributeValues.attributeValues[i].show){
-                    downInfo.push({
-                        'head': result.data.downAttributeValues.attributeValues[i].attributeDesc + '：',
-                        'value': result.data.downAttributeValues.attributeValues[i].value
-                    })
+                for (let i = 0; i < result.data.downAttributeValues.attributeValues.length; i++) {
+                    if (result.data.downAttributeValues.attributeValues[i].show){
+                        downInfo.push({
+                            'head': result.data.downAttributeValues.attributeValues[i].attributeDesc + '：',
+                            'value': result.data.downAttributeValues.attributeValues[i].value
+                        })
+                    }
                 }
-            }
-            for (let i = 0; i < result.data.upAttributeValues.attributeValues.length; i++) {
-                if (result.data.upAttributeValues.attributeValues[i].show){
-                    upInfo.push({
-                        'head': result.data.upAttributeValues.attributeValues[i].attributeDesc + '：',
-                        'value': result.data.upAttributeValues.attributeValues[i].value
-                    })
+                for (let i = 0; i < result.data.upAttributeValues.attributeValues.length; i++) {
+                    if (result.data.upAttributeValues.attributeValues[i].show){
+                        upInfo.push({
+                            'head': result.data.upAttributeValues.attributeValues[i].attributeDesc + '：',
+                            'value': result.data.upAttributeValues.attributeValues[i].value
+                        })
+                    }
                 }
-            }
-            console.log(downtotaltitle);
-            console.log(downtitle);
-            console.log(uptitle);
-            // if(downtotaltitle!=null){
-            dataIfo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
-            dataIfotwo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
-            if (downtotaltitle == null){
-                $('#downtitle p').text('');
-                var basicspeed = 150;
-                setInterval(basicMarquee,basicspeed);
-                var basicdiv = document.getElementById('basicdiv');
+                // console.log(upInfo);
+                // if(downtotaltitle!=null){
+                dataIfo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
+                dataIfotwo(dataInfo,downInfo,upInfo,downtitle,uptitle,downtotaltitle);
+                if (downtotaltitle == null){
+                    $('#downtitle p').text('');
+                    var basicspeed = 150;
+                    setInterval(basicMarquee,basicspeed);
+                    var basicdiv = document.getElementById('basicdiv');
 //滚动函数
-                var flag = 1;
-                function basicMarquee(){
+                    var flag = 1;
+                    function basicMarquee(){
 
 
-                    if(basicdiv.scrollTop>=basicdiv.offsetHeight+60){
+                        if(basicdiv.scrollTop>=basicdiv.offsetHeight+60){
 
-                        // basicdiv.scrollTop=0;
-                        if (flag %2 ===1){
-                            $('#basicul').append($('#basicli'));
+                            // basicdiv.scrollTop=0;
+                            if (flag %2 ===1){
+                                $('#basicul').append($('#basicli'));
 
-                        } else {
-                            $('#basicul').append($('#basiclitwo'));
+                            } else {
+                                $('#basicul').append($('#basiclitwo'));
+                            }
+                            flag++;
+                            // console.log(basicdiv.offsetHeight);
                         }
-                        flag++;
-                        // console.log(basicdiv.offsetHeight);
-                    }
-                    else{
-                        basicdiv.scrollTop=basicdiv.scrollTop+1;
-                        // console.log(basicdiv.scrollTop);
+                        else{
+                            basicdiv.scrollTop=basicdiv.scrollTop+1;
+                            // console.log(basicdiv.scrollTop);
 
+                        }
+                    }
+                }else {
+                    var basicspeed = 150;
+                    setInterval(basicMarquee,basicspeed);
+                    var basicdiv = document.getElementById('basicdiv');
+//滚动函数
+                    var flag = 1;
+                    function basicMarquee(){
+
+
+                        if(basicdiv.scrollTop>=basicdiv.offsetHeight+148){
+
+                            // basicdiv.scrollTop=0;
+                            if (flag %2 ===1){
+                                $('#basicul').append($('#basicli'));
+
+                            } else {
+                                $('#basicul').append($('#basiclitwo'));
+                            }
+                            flag++;
+                            // console.log(basicdiv.offsetHeight);
+                        }
+                        else{
+                            basicdiv.scrollTop=basicdiv.scrollTop+1;
+                            // console.log(basicdiv.scrollTop);
+
+                        }
                     }
                 }
-            }else {
-                var basicspeed = 150;
-                setInterval(basicMarquee,basicspeed);
-                var basicdiv = document.getElementById('basicdiv');
-//滚动函数
-                var flag = 1;
-                function basicMarquee(){
-
-
-                    if(basicdiv.scrollTop>=basicdiv.offsetHeight+148){
-
-                        // basicdiv.scrollTop=0;
-                        if (flag %2 ===1){
-                            $('#basicul').append($('#basicli'));
-
-                        } else {
-                            $('#basicul').append($('#basiclitwo'));
-                        }
-                        flag++;
-                        // console.log(basicdiv.offsetHeight);
+                for (let i = 0 ; i<upInfo.length;i++){
+                    switch (upInfo[i].head) {
+                        case '男卫生间：': $('#leftManSum').text(upInfo[i].value);break;
+                        case '女卫生间：': $('#leftWomenSum').text(upInfo[i].value);break;
+                        case '大车车位：': $('#leftBigCarSum').text(upInfo[i].value);break;
+                        case '小车车位：': $('#leftSmollCarSum').text(upInfo[i].value);break;
+                        case '客车车位：': $('#leftTruckSum').text(upInfo[i].value);break;
                     }
-                    else{
-                        basicdiv.scrollTop=basicdiv.scrollTop+1;
-                        // console.log(basicdiv.scrollTop);
 
+                }
+                for (let j = 0 ; j<downInfo.length;j++){
+                    // console.log(upInfo[j].head);
+                    switch (downInfo[j].head) {
+                        case '男卫生间：': $('#rightManSum').text(downInfo[j].value);break;
+                        case '女卫生间：': $('#rightWomenSum').text(downInfo[j].value);break;
+                        case '大车车位：': $('#rightBigCarSum').text(downInfo[j].value);break;
+                        case '小车车位：': $('#rightSmollCarSum').text(downInfo[j].value);break;
+                        case '客车车位：': $('#rightTruckSum').text(downInfo[j].value);break;
                     }
+
                 }
             }
+
         }
     });
 }
@@ -178,8 +213,11 @@ function getPeopleMap() {
         data: json,
         contentType: "application/json",
         success: function (result) {
-            const myChartMap = echarts.init(document.getElementById('Map'));
-            Bmap(myChartMap, result.data);
+            if ( result.data) {
+                const myChartMap = echarts.init(document.getElementById('Map'));
+                Bmap(myChartMap, result.data);
+            }
+
         }
     });
 }
@@ -189,9 +227,8 @@ function getToiletData() {
     setInterval(function () {
         var cartitleleft = '遵义->贵阳';
         var cartitle = '贵阳->遵义';
-        leftToilet(cartitleleft,(Math.random() * 30).toFixed(0),(Math.random() * 30).toFixed(0),(Math.random() * 30).toFixed(0));
-        rightToilet(cartitle,(Math.random() * 30).toFixed(0),(Math.random() * 30).toFixed(0),(Math.random() * 30).toFixed(0))
-
+        leftToilet(cartitleleft,'无','无');
+        rightToilet(cartitle,'无','无')
 
     },1000)
     // const myChartgraph1 = echarts.init(document.getElementById('graph1'));
@@ -210,7 +247,10 @@ function getCarNum() {
         contentType: "application/json",
         success: function (result) {
             // console.log(result.data);
-            carData(result.data);
+            if (result.data) {
+                carData(result.data);
+
+            }
 
         }
     });
@@ -220,13 +260,16 @@ function getCarNum() {
 function getCarPie() {
 
     $.ajax({
-        url: url + "/serviceArea/realTime/passenger/nationwideDistributeMap/" + value,
+        url: url + "/serviceArea/realTime/vehicle/nationwideDistributeMap/" + value,
         type: "GET",
         data: json,
         contentType: "application/json",
         success: function (result) {
-            const myChartpie = echarts.init(document.getElementById('pie'));
-            BPie(myChartpie, result.data);
+            if (result.data) {
+                const myChartpie = echarts.init(document.getElementById('pie'));
+                BPie(myChartpie, result.data);
+            }
+
         }
     });
 
@@ -254,10 +297,11 @@ function getCarPie() {
 
 function getCarportData() {
     setInterval(function () {
+
         var cartitleleft = '遵义->贵阳';
         var cartitle = '贵阳->遵义';
-        leftCar(cartitleleft,(Math.random() * 100).toFixed(0),(Math.random() * 100).toFixed(0),(Math.random() * 100).toFixed(0));
-        rightCar(cartitle,(Math.random() * 100).toFixed(0),(Math.random() * 100).toFixed(0),(Math.random() * 100).toFixed(0))
+        leftCar(cartitleleft,'无','无','无');
+        rightCar(cartitle,'无','无','无')
 
     },1000);
     // const myChartdashboard1 = echarts.init(document.getElementById('dashboard1'));
@@ -268,3 +312,39 @@ function getCarportData() {
     // dashboard3(myChartdashboard3, '货车车位');
 }
 
+
+function getCarportTime() {
+    // setInterval(function () {
+    $.ajax({
+        url: "http://120.77.171.73:8080/highway-sabd/vehicle/get/volume",
+        type: "POST",
+        data: jsondata,
+        contentType: "application/x-www-form-urlencoded",
+        success: function (result) {
+            if (result.data) {
+                // console.log(result.data.VEHICLE_VOLUME_2_3_1_2.goodsCarNum);
+
+                let cartitleleft = result.data.VEHICLE_VOLUME_2_3_1_2.orientation;
+                let cartitle =  result.data.VEHICLE_VOLUME_2_3_1_3.orientation;
+                left(cartitleleft,result.data.VEHICLE_VOLUME_2_3_1_2.goodsCarNum,result.data.VEHICLE_VOLUME_2_3_1_2.smallCarNum,result.data.VEHICLE_VOLUME_2_3_1_2.passengerCarNum);
+
+                right(cartitle,result.data.VEHICLE_VOLUME_2_3_1_3.goodsCarNum,result.data.VEHICLE_VOLUME_2_3_1_3.smallCarNum,result.data.VEHICLE_VOLUME_2_3_1_3.passengerCarNum)
+            }
+        }
+    });
+
+    $.ajax({
+        url: "http://120.77.171.73:8080/highway-sabd/vehicle/query/detention/time",
+        type: "POST",
+        data: jsondata,
+        contentType: "application/x-www-form-urlencoded",
+        success: function (result) {
+            if (result.data) {
+                console.log(result.data);
+                rightTime(result.data.VEHICLE_DETENTION_TIME_2_3_1_2.goodsCarDetentionTimeAvg.toFixed(3),result.data.VEHICLE_DETENTION_TIME_2_3_1_2.smallCarDetentionTimeAvg.toFixed(3),result.data.VEHICLE_DETENTION_TIME_2_3_1_2.passengerCarDetentionTimeAvg.toFixed(3));
+
+                leftTime(result.data.VEHICLE_DETENTION_TIME_2_3_1_3.goodsCarDetentionTimeAvg.toFixed(3),result.data.VEHICLE_DETENTION_TIME_2_3_1_3.smallCarDetentionTimeAvg.toFixed(3),result.data.VEHICLE_DETENTION_TIME_2_3_1_3.passengerCarDetentionTimeAvg.toFixed(3))
+            }
+        }
+    });
+}

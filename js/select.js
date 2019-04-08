@@ -30,6 +30,7 @@ function cityChange(elment) {
     // console.log(elment);
     console.log(elment.srcElement.selectedOptions[0].id);
     var id =elment.srcElement.selectedOptions[0].id;
+    window.sessionStorage.setItem("provinceId", elment.srcElement.selectedOptions[0].id);
     $.ajax({
         url:http+"/serviceArea/config/getCityByProvinceId/"+id,
         type:"GET",
@@ -49,6 +50,7 @@ function cityChange(elment) {
 function areaChange(elment) {
     // console.log(elment.srcElement.selectedOptions[0].id);
     var id =elment.srcElement.selectedOptions[0].id;
+    window.sessionStorage.setItem("cityid", elment.srcElement.selectedOptions[0].id);
     $.ajax({
         url:http+"/serviceArea/config/getServiceAreaByCityId/"+id,
         type:"GET",

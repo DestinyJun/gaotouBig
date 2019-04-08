@@ -14,6 +14,18 @@ function getJson() {
 
 }
 
+function getData() {
+    json = {
+        'provinceId': window.sessionStorage.getItem("provinceId"),
+        'cityId': window.sessionStorage.getItem("cityid"),
+        'serviceAreaId': window.localStorage.getItem("id"),
+        'appId': appId,
+        'time': time1,
+        'sign': sign
+   };
+   return json;
+}
+
 // 获取本地的时分秒
 function tick() {
     var myDate = new Date();

@@ -11,7 +11,7 @@ $(document).ready(function() {
         n = i;
         if (i >= count) return;
         // 淡入淡出效果
-        $("#banner_list div").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+        $("#banner_list div").filter(":visible").fadeOut(1000).parent().children().eq(i).fadeIn(1000);
 
         // 响应点击
         $(this).toggleClass("on");

@@ -305,29 +305,29 @@ ul {
     height: 21vh;
     margin-top: 78vh;
 }
-.dashboard  .carportTitle{
+.carportTitle{
     color: #3EAACC;
     font-size: 1rem;
     text-align: center;
     margin-top: 0.2rem
 }
-.dashboard .carport {
+.carport {
     color: #3EAACC;
     font-size: 0.875rem;
     text-align: center;
     margin-top: 0.2rem
 }
-.dashboard .carport .carportBig{
-    width: 80%;
+ .carport .carportBig{
+    width: 96%;
     height: 3vh;
     /*text-align: center;*/
     background: #3EAACC;
     color: #fff;
-    margin-left: 1vw;
-    margin-top: 0.7rem;
+    margin-left: 0.3vw;
+    margin-top: 1rem;
     border-radius: 5px;
 }
-.dashboard .carport span{
+.carport span{
     font-size: 0.7rem;
     text-align: center;
     line-height: 3vh;
